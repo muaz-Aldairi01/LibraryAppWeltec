@@ -172,5 +172,63 @@ namespace LibraryAppWeltec
         {
 
         }
+
+        private void booklistbox_l_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bookinfo.ContainsKey(booklistbox_l.SelectedValue.ToString()))
+
+                //update selected Book
+                selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];
+
+            // Just for count of no. of entries in both listboxes
+            label2.Text = booklistbox_l.Items.Count.ToString();
+
+
+            // Question: from where and how are these (below) data coming?
+
+            priceBox.Text = selectedBook.Price.ToString();
+            isbnBox.Text = selectedBook.Isbn;
+            authorBox.Text = selectedBook.Author;
+            yearBox.Text = selectedBook.PublishedYear.ToString();
+
+        }
+
+        private void articlelistbox_l_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (articleinfo.ContainsKey(articlelistbox_l.SelectedValue.ToString()))
+
+                //update selected Book
+                selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
+
+            // Just for count of no. of entries in both listboxes
+            label4.Text = articlelistbox_l.Items.Count.ToString();
+
+
+            // Question: from where and how are these (below) data coming?
+
+            priceBox.Text = selectedArticle.Price.ToString();
+            isbnBox.Text = selectedArticle.Isbn;
+            authorBox.Text = selectedArticle.Author;
+            yearBox.Text = selectedArticle.PublishedYear.ToString();
+        }
+
+        private void medialistbox_l_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (mediainfo.ContainsKey(medialistbox_l.SelectedValue.ToString()))
+
+                //update selected Book
+                selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];
+
+            // Just for count of no. of entries in both listboxes
+            label6.Text = medialistbox_l.Items.Count.ToString();
+
+
+            // Question: from where and how are these (below) data coming?
+
+            priceBox.Text = selectedMedia.Price.ToString();
+            isbnBox.Text = selectedMedia.Isbn;
+            authorBox.Text = selectedMedia.Author;
+            yearBox.Text = selectedMedia.PublishedYear.ToString();
+        }
     }
 }
