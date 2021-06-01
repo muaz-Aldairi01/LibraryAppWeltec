@@ -121,6 +121,53 @@ namespace LibraryAppWeltec
 
         }
 
+        private void refreshForm()
+        { //simply calls method below
+
+            displayBooksinbooklistbox();
+            displayArticlesinbooklistbox();
+            displayMediainbooklistbox();
+
+        }
+
+
+
+        private void displayBooksinbooklistbox()
+        {
+            //bind booklistbox to bookinfo Dictionary collection.
+
+            booklistbox_l.DataSource = new BindingSource(bookinfo, null);
+
+            //display the entries by key. Read about Listbox control here      
+
+            booklistbox_l.ValueMember = "Key";
+
+        }
+
+        private void displayArticlesinbooklistbox()
+        {
+            //bind booklistbox to bookinfo Dictionary collection.
+
+            articlelistbox_l.DataSource = new BindingSource(articleinfo, null);
+
+            //display the entries by key. Read about Listbox control here      
+
+            articlelistbox_l.ValueMember = "Key";
+
+        }
+
+        private void displayMediainbooklistbox()
+        {
+            //bind booklistbox to bookinfo Dictionary collection.
+
+            medialistbox_l.DataSource = new BindingSource(mediainfo, null);
+
+            //display the entries by key. Read about Listbox control here      
+
+            medialistbox_l.ValueMember = "Key";
+
+        }
+
         private void librarianForm_Load(object sender, EventArgs e)
         {
 
