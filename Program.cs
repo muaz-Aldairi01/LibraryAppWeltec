@@ -16,7 +16,7 @@ namespace LibraryAppWeltec
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LibraryAppForm());
+            Application.Run(new librarianForm());
         }
     }
 }
