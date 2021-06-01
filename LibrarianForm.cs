@@ -65,7 +65,7 @@ namespace LibraryAppWeltec
 
             // Articles 
 
-            var article_path = @"../../datafiles/Books.csv";
+            var article_path = @"../../datafiles/Articles.csv";
             string[] article_lines = System.IO.File.ReadAllLines(article_path);
             foreach (string line in article_lines)
             {
@@ -92,7 +92,7 @@ namespace LibraryAppWeltec
 
             // Media
 
-            var media_path = @"../../datafiles/Books.csv";
+            var media_path = @"../../datafiles/Media.csv";
             string[] media_lines = System.IO.File.ReadAllLines(media_path);
             foreach (string line in media_lines)
             {
