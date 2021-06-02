@@ -230,5 +230,38 @@ namespace LibraryAppWeltec
             authorBox.Text = selectedMedia.Author;
             yearBox.Text = selectedMedia.PublishedYear.ToString();
         }
+
+        private void addBookbtn_Click(object sender, EventArgs e)
+        {
+            //create an instance “ab” of newly added AddNewBook form
+
+            addNewBook ab = new addNewBook();
+
+            //execute addBookFormClosed() on form closed. The below is a delegate ab.FormClosed where we are adding a FormClosedevent handler which will trigger the method addBookFormClosed. It is basically saying if the Form ‘ab’ is closed then execute addbookFormClosed method (which we will code in step k below).
+
+            ab.FormClosed += new FormClosedEventHandler(addBookFormClosed);
+
+            ab.Show(); // to display newly created form ‘ab
+
+        }
+
+        void addBookFormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
+            if (Program.newBookName != null)
+                bookinfo.Add(Program.newBookName, new Books
+                {
+                    Price = 0,
+                    Isbn = null,
+                    Author = null,
+                    PublishedYear = 0,
+                 
+                });
+
+            Program.newBookName = null;
+            displayBooksinbooklistbox();
+        }
+
     }
 }

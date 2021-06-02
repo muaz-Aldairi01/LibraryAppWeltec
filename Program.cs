@@ -11,12 +11,14 @@ namespace LibraryAppWeltec
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        public static string newBookName = null, newSimlilarBookName = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TutorForm());
+            Application.Run(new librarianForm());
         }
     }
 }
