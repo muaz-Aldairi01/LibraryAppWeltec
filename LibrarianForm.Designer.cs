@@ -189,6 +189,7 @@
             this.saveChanges.TabIndex = 41;
             this.saveChanges.Text = "Save Changes";
             this.saveChanges.UseVisualStyleBackColor = true;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
             // removeMediabtn
             // 
@@ -198,6 +199,7 @@
             this.removeMediabtn.TabIndex = 40;
             this.removeMediabtn.Text = "Remove Media";
             this.removeMediabtn.UseVisualStyleBackColor = true;
+            this.removeMediabtn.Click += new System.EventHandler(this.removeMediabtn_Click);
             // 
             // addMediabtn
             // 
@@ -207,6 +209,7 @@
             this.addMediabtn.TabIndex = 39;
             this.addMediabtn.Text = "Add Media";
             this.addMediabtn.UseVisualStyleBackColor = true;
+            this.addMediabtn.Click += new System.EventHandler(this.addMediabtn_Click);
             // 
             // addArticlebtn
             // 
@@ -216,6 +219,7 @@
             this.addArticlebtn.TabIndex = 38;
             this.addArticlebtn.Text = "Add Article";
             this.addArticlebtn.UseVisualStyleBackColor = true;
+            this.addArticlebtn.Click += new System.EventHandler(this.addArticlebtn_Click);
             // 
             // removeArticlebtn
             // 
@@ -225,6 +229,7 @@
             this.removeArticlebtn.TabIndex = 37;
             this.removeArticlebtn.Text = "Remove Article";
             this.removeArticlebtn.UseVisualStyleBackColor = true;
+            this.removeArticlebtn.Click += new System.EventHandler(this.removeArticlebtn_Click);
             // 
             // removeBookbtn
             // 
@@ -234,6 +239,7 @@
             this.removeBookbtn.TabIndex = 36;
             this.removeBookbtn.Text = "Remove Book";
             this.removeBookbtn.UseVisualStyleBackColor = true;
+            this.removeBookbtn.Click += new System.EventHandler(this.removeBookbtn_Click);
             // 
             // addBookbtn
             // 
@@ -279,6 +285,7 @@
             this.searchBox_l.Name = "searchBox_l";
             this.searchBox_l.Size = new System.Drawing.Size(198, 26);
             this.searchBox_l.TabIndex = 30;
+            this.searchBox_l.TextChanged += new System.EventHandler(this.searchBox_l_TextChanged);
             // 
             // AvailableArticles_l
             // 

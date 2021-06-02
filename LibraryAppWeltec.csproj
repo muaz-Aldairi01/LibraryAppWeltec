@@ -46,14 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addNewArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewArticle.Designer.cs">
+      <DependentUpon>addNewArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="addNewBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addNewBook.Designer.cs">
       <DependentUpon>addNewBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="addNewMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewMedia.Designer.cs">
+      <DependentUpon>addNewMedia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articles.cs" />
     <Compile Include="Books.cs" />
+    <Compile Include="Borrowings.cs" />
     <Compile Include="LibrarianForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,14 +94,26 @@
     <Compile Include="StudentInfoForm.Designer.cs">
       <DependentUpon>StudentInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TutorBorrowingsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorBorrowingsList.Designer.cs">
+      <DependentUpon>TutorBorrowingsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="TutorForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TutorForm.Designer.cs">
       <DependentUpon>TutorForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addNewArticle.resx">
+      <DependentUpon>addNewArticle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addNewBook.resx">
       <DependentUpon>addNewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addNewMedia.resx">
+      <DependentUpon>addNewMedia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianForm.resx">
       <DependentUpon>LibrarianForm.cs</DependentUpon>
@@ -110,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInfoForm.resx">
       <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorBorrowingsList.resx">
+      <DependentUpon>TutorBorrowingsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TutorForm.resx">
       <DependentUpon>TutorForm.cs</DependentUpon>

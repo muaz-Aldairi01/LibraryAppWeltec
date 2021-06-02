@@ -218,6 +218,7 @@
             this.searchBox_l.Name = "searchBox_l";
             this.searchBox_l.Size = new System.Drawing.Size(198, 26);
             this.searchBox_l.TabIndex = 58;
+            this.searchBox_l.TextChanged += new System.EventHandler(this.searchBox_l_TextChanged);
             // 
             // AvailableArticles_l
             // 

@@ -122,11 +122,11 @@ namespace LibraryAppWeltec
         }
 
         private void refreshForm()
-        { //simply calls method below
+        {
 
             displayBooksinbooklistbox();
-            displayArticlesinbooklistbox();
-            displayMediainbooklistbox();
+            displayArticlesinarticlelistbox();
+            displayMediainmedialistbox();
 
         }
 
@@ -134,57 +134,44 @@ namespace LibraryAppWeltec
 
         private void displayBooksinbooklistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
 
-            booklistbox_l.DataSource = new BindingSource(bookinfo, null);
-
-            //display the entries by key. Read about Listbox control here      
+            booklistbox_l.DataSource = new BindingSource(bookinfo, null);      
 
             booklistbox_l.ValueMember = "Key";
 
         }
 
-        private void displayArticlesinbooklistbox()
+        private void displayArticlesinarticlelistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
 
-            articlelistbox_l.DataSource = new BindingSource(articleinfo, null);
-
-            //display the entries by key. Read about Listbox control here      
+            articlelistbox_l.DataSource = new BindingSource(articleinfo, null);      
 
             articlelistbox_l.ValueMember = "Key";
 
         }
 
-        private void displayMediainbooklistbox()
+        private void displayMediainmedialistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
 
-            medialistbox_l.DataSource = new BindingSource(mediainfo, null);
-
-            //display the entries by key. Read about Listbox control here      
+            medialistbox_l.DataSource = new BindingSource(mediainfo, null);     
 
             medialistbox_l.ValueMember = "Key";
 
         }
 
-        private void librarianForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void booklistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (bookinfo.ContainsKey(booklistbox_l.SelectedValue.ToString()))
 
-                //update selected Book
+             
                 selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];
 
-            // Just for count of no. of entries in both listboxes
+            
             label2.Text = booklistbox_l.Items.Count.ToString();
 
 
-            // Question: from where and how are these (below) data coming?
+            
 
             priceBox.Text = selectedBook.Price.ToString();
             isbnBox.Text = selectedBook.Isbn;
@@ -197,14 +184,12 @@ namespace LibraryAppWeltec
         {
             if (articleinfo.ContainsKey(articlelistbox_l.SelectedValue.ToString()))
 
-                //update selected Book
+              
                 selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
 
-            // Just for count of no. of entries in both listboxes
+         
             label4.Text = articlelistbox_l.Items.Count.ToString();
 
-
-            // Question: from where and how are these (below) data coming?
 
             priceBox.Text = selectedArticle.Price.ToString();
             isbnBox.Text = selectedArticle.Isbn;
@@ -216,14 +201,12 @@ namespace LibraryAppWeltec
         {
             if (mediainfo.ContainsKey(medialistbox_l.SelectedValue.ToString()))
 
-                //update selected Book
+             
                 selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];
 
-            // Just for count of no. of entries in both listboxes
+            
             label6.Text = medialistbox_l.Items.Count.ToString();
 
-
-            // Question: from where and how are these (below) data coming?
 
             priceBox.Text = selectedMedia.Price.ToString();
             isbnBox.Text = selectedMedia.Isbn;
@@ -231,23 +214,20 @@ namespace LibraryAppWeltec
             yearBox.Text = selectedMedia.PublishedYear.ToString();
         }
 
+
+        // Add book button
         private void addBookbtn_Click(object sender, EventArgs e)
         {
-            //create an instance “ab” of newly added AddNewBook form
 
             addNewBook ab = new addNewBook();
 
-            //execute addBookFormClosed() on form closed. The below is a delegate ab.FormClosed where we are adding a FormClosedevent handler which will trigger the method addBookFormClosed. It is basically saying if the Form ‘ab’ is closed then execute addbookFormClosed method (which we will code in step k below).
-
             ab.FormClosed += new FormClosedEventHandler(addBookFormClosed);
 
-            ab.Show(); // to display newly created form ‘ab
-
+            ab.Show(); 
         }
 
         void addBookFormClosed(object sender, FormClosedEventArgs e)
         {
-
 
             if (Program.newBookName != null)
                 bookinfo.Add(Program.newBookName, new Books
@@ -263,5 +243,198 @@ namespace LibraryAppWeltec
             displayBooksinbooklistbox();
         }
 
+       
+        // Remove book button
+        private void removeBookbtn_Click(object sender, EventArgs e)
+        {
+            bookinfo.Remove(booklistbox_l.SelectedValue.ToString()); 
+            refreshForm();
+        }
+
+
+        // Add article button
+
+        private void addArticlebtn_Click(object sender, EventArgs e)
+        {
+            addNewArticle ab = new addNewArticle();
+
+            ab.FormClosed += new FormClosedEventHandler(addArticleFormClosed);
+
+            ab.Show();
+
+        }
+
+        void addArticleFormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            if (Program.newArticleName != null)
+                articleinfo.Add(Program.newArticleName, new Articles
+                {
+                    Price = 0,
+                    Isbn = null,
+                    Author = null,
+                    PublishedYear = 0,
+
+                });
+
+            Program.newArticleName = null;
+            displayArticlesinarticlelistbox();
+        }
+
+       
+        // Remove article button
+
+        private void removeArticlebtn_Click(object sender, EventArgs e)
+        {
+            articleinfo.Remove(articlelistbox_l.SelectedValue.ToString());
+            refreshForm();
+        }
+
+
+        // Add media button
+        private void addMediabtn_Click(object sender, EventArgs e)
+        {
+            addNewMedia ab = new addNewMedia();
+
+            ab.FormClosed += new FormClosedEventHandler(addMediaFormClosed);
+
+            ab.Show();
+        }
+
+        void addMediaFormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            if (Program.newMediaName != null)
+                mediainfo.Add(Program.newMediaName, new Media
+                {
+                    Price = 0,
+                    Isbn = null,
+                    Author = null,
+                    PublishedYear = 0,
+
+                });
+
+            Program.newMediaName = null;
+            displayMediainmedialistbox();
+        }
+
+
+        // Remove media button
+
+        private void removeMediabtn_Click(object sender, EventArgs e)
+        {
+            mediainfo.Remove(medialistbox_l.SelectedValue.ToString());
+            refreshForm();
+        }
+
+
+        // save changes button
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            selectedBook.Price = Double.Parse(priceBox.Text);
+            selectedBook.Isbn = isbnBox.Text;
+            selectedBook.Author = authorBox.Text;
+            selectedBook.PublishedYear = Int32.Parse(yearBox.Text);
+
+            selectedArticle.Price = Double.Parse(priceBox.Text);
+            selectedArticle.Isbn = isbnBox.Text;
+            selectedArticle.Author = authorBox.Text;
+            selectedArticle.PublishedYear = Int32.Parse(yearBox.Text);
+
+            selectedMedia.Price = Double.Parse(priceBox.Text);
+            selectedMedia.Isbn = isbnBox.Text;
+            selectedMedia.Author = authorBox.Text;
+            selectedMedia.PublishedYear = Int32.Parse(yearBox.Text);
+        }
+
+
+        private void librarianForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBox_l_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox_l.Text != "") 
+            {
+                if (searchBox_l.Text.Length == 1)
+                { 
+                    searchBox_l.Text = searchBox_l.Text.ToString().ToUpper();
+                    searchBox_l.Select(searchBox_l.Text.Length, 0);
+                }
+                // search books
+                var filtered_book = bookinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_book.Count > 0)
+                {                   
+
+                    booklistbox_l.DataSource = new BindingSource(filtered_book, null);
+                    booklistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false; 
+                    resultlbl_l.Visible = true;
+                    
+                    if (filtered_book.Count == 1) resultlbl_l.Text = filtered_book.Count + " match";
+
+                    else resultlbl_l.Text = filtered_book.Count + " matches";
+                }
+                else
+                {
+                    noresultlbl_l.Visible = true; 
+                    resultlbl_l.Visible = false; 
+                }
+
+                // search articles
+
+                var filtered_article = articleinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_article.Count > 0)
+                {
+
+                    articlelistbox_l.DataSource = new BindingSource(filtered_article, null);
+                    articlelistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false;
+                    resultlbl_l.Visible = true;
+
+                    if (filtered_article.Count == 1) resultlbl_l.Text = filtered_article.Count + " match";
+
+                    else resultlbl_l.Text = filtered_article.Count + " matches";
+                }
+                if (filtered_article.Count == 0)
+                {
+                    noresultlbl_l.Visible = true;
+                    resultlbl_l.Visible = false;
+                }
+
+                // search media
+                var filtered_media = mediainfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_media.Count > 0)
+                {
+
+                    medialistbox_l.DataSource = new BindingSource(filtered_media, null);
+                    medialistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false;
+                    resultlbl_l.Visible = true;
+
+                    if (filtered_media.Count == 1) resultlbl_l.Text = filtered_media.Count + " match";
+
+                    else resultlbl_l.Text = filtered_media.Count + " matches";
+                }
+                else
+                {
+                    noresultlbl_l.Visible = true;
+                    resultlbl_l.Visible = false;
+                }
+
+            }
+            else
+            {
+                displayBooksinbooklistbox();
+                displayArticlesinarticlelistbox();
+                displayMediainmedialistbox();
+                resultlbl_l.Visible = noresultlbl_l.Visible = false;
+            }
+
+        }
     }
 }

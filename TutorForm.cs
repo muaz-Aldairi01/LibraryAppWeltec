@@ -121,8 +121,8 @@ namespace LibraryAppWeltec
         { //simply calls method below
 
             displayBooksinbooklistbox();
-            displayArticlesinbooklistbox();
-            displayMediainbooklistbox();
+            displayArticlesinarticlelistbox();
+            displayMediainmedialistbox();
 
         }
 
@@ -140,7 +140,7 @@ namespace LibraryAppWeltec
 
         }
 
-        private void displayArticlesinbooklistbox()
+        private void displayArticlesinarticlelistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
@@ -152,7 +152,7 @@ namespace LibraryAppWeltec
 
         }
 
-        private void displayMediainbooklistbox()
+        private void displayMediainmedialistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
@@ -220,6 +220,89 @@ namespace LibraryAppWeltec
             isbnBox.Text = selectedMedia.Isbn;
             authorBox.Text = selectedMedia.Author;
             yearBox.Text = selectedMedia.PublishedYear.ToString();
+        }
+
+        private void searchBox_l_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox_l.Text != "")
+            {
+                if (searchBox_l.Text.Length == 1)
+                {
+                    searchBox_l.Text = searchBox_l.Text.ToString().ToUpper();
+                    searchBox_l.Select(searchBox_l.Text.Length, 0);
+                }
+                // search books
+                var filtered_book = bookinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_book.Count > 0)
+                {
+
+                    booklistbox_l.DataSource = new BindingSource(filtered_book, null);
+                    booklistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false;
+                    resultlbl_l.Visible = true;
+
+                    if (filtered_book.Count == 1) resultlbl_l.Text = filtered_book.Count + " match";
+
+                    else resultlbl_l.Text = filtered_book.Count + " matches";
+                }
+                else
+                {
+                    noresultlbl_l.Visible = true;
+                    resultlbl_l.Visible = false;
+                }
+
+                // search articles
+
+                var filtered_article = articleinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_article.Count > 0)
+                {
+
+                    articlelistbox_l.DataSource = new BindingSource(filtered_article, null);
+                    articlelistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false;
+                    resultlbl_l.Visible = true;
+
+                    if (filtered_article.Count == 1) resultlbl_l.Text = filtered_article.Count + " match";
+
+                    else resultlbl_l.Text = filtered_article.Count + " matches";
+                }
+                if (filtered_article.Count == 0)
+                {
+                    noresultlbl_l.Visible = true;
+                    resultlbl_l.Visible = false;
+                }
+
+                // search media
+                var filtered_media = mediainfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_media.Count > 0)
+                {
+
+                    medialistbox_l.DataSource = new BindingSource(filtered_media, null);
+                    medialistbox_l.ValueMember = "Key";
+                    noresultlbl_l.Visible = false;
+                    resultlbl_l.Visible = true;
+
+                    if (filtered_media.Count == 1) resultlbl_l.Text = filtered_media.Count + " match";
+
+                    else resultlbl_l.Text = filtered_media.Count + " matches";
+                }
+                else
+                {
+                    noresultlbl_l.Visible = true;
+                    resultlbl_l.Visible = false;
+                }
+
+            }
+            else
+            {
+                displayBooksinbooklistbox();
+                displayArticlesinarticlelistbox();
+                displayMediainmedialistbox();
+                resultlbl_l.Visible = noresultlbl_l.Visible = false;
+            }
         }
     }
 }
