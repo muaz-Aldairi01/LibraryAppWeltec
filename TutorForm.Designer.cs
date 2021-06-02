@@ -237,6 +237,7 @@
             this.articlelistbox_l.Name = "articlelistbox_l";
             this.articlelistbox_l.Size = new System.Drawing.Size(168, 244);
             this.articlelistbox_l.TabIndex = 3;
+            this.articlelistbox_l.SelectedIndexChanged += new System.EventHandler(this.articlelistbox_l_SelectedIndexChanged);
             // 
             // AvailableMedia_l
             // 
@@ -256,6 +257,7 @@
             this.medialistbox_l.Name = "medialistbox_l";
             this.medialistbox_l.Size = new System.Drawing.Size(170, 244);
             this.medialistbox_l.TabIndex = 4;
+            this.medialistbox_l.SelectedIndexChanged += new System.EventHandler(this.medialistbox_l_SelectedIndexChanged);
             // 
             // AvailableBooks_l
             // 
@@ -275,6 +277,7 @@
             this.booklistbox_l.Name = "booklistbox_l";
             this.booklistbox_l.Size = new System.Drawing.Size(173, 244);
             this.booklistbox_l.TabIndex = 2;
+            this.booklistbox_l.SelectedIndexChanged += new System.EventHandler(this.booklistbox_l_SelectedIndexChanged);
             // 
             // TutorForm
             // 
