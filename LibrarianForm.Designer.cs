@@ -47,7 +47,7 @@
             this.addArticlebtn = new System.Windows.Forms.Button();
             this.removeArticlebtn = new System.Windows.Forms.Button();
             this.removeBookbtn = new System.Windows.Forms.Button();
-            this.addBookbtn_l = new System.Windows.Forms.Button();
+            this.addBookbtn = new System.Windows.Forms.Button();
             this.yearBox = new System.Windows.Forms.TextBox();
             this.authorBox = new System.Windows.Forms.TextBox();
             this.isbnBox = new System.Windows.Forms.TextBox();
@@ -230,19 +230,20 @@
             // 
             this.removeBookbtn.Location = new System.Drawing.Point(92, 583);
             this.removeBookbtn.Name = "removeBookbtn";
-            this.removeBookbtn.Size = new System.Drawing.Size(103, 41);
+            this.removeBookbtn.Size = new System.Drawing.Size(125, 41);
             this.removeBookbtn.TabIndex = 36;
             this.removeBookbtn.Text = "Remove Book";
             this.removeBookbtn.UseVisualStyleBackColor = true;
             // 
-            // addBookbtn_l
+            // addBookbtn
             // 
-            this.addBookbtn_l.Location = new System.Drawing.Point(92, 521);
-            this.addBookbtn_l.Name = "addBookbtn_l";
-            this.addBookbtn_l.Size = new System.Drawing.Size(103, 41);
-            this.addBookbtn_l.TabIndex = 35;
-            this.addBookbtn_l.Text = "Add Book";
-            this.addBookbtn_l.UseVisualStyleBackColor = true;
+            this.addBookbtn.Location = new System.Drawing.Point(92, 521);
+            this.addBookbtn.Name = "addBookbtn";
+            this.addBookbtn.Size = new System.Drawing.Size(125, 41);
+            this.addBookbtn.TabIndex = 35;
+            this.addBookbtn.Text = "Add Book";
+            this.addBookbtn.UseVisualStyleBackColor = true;
+            this.addBookbtn.Click += new System.EventHandler(this.addBookbtn_Click);
             // 
             // yearBox
             // 
@@ -363,7 +364,7 @@
             this.Controls.Add(this.addArticlebtn);
             this.Controls.Add(this.removeArticlebtn);
             this.Controls.Add(this.removeBookbtn);
-            this.Controls.Add(this.addBookbtn_l);
+            this.Controls.Add(this.addBookbtn);
             this.Controls.Add(this.yearBox);
             this.Controls.Add(this.authorBox);
             this.Controls.Add(this.isbnBox);
@@ -404,7 +405,7 @@
         private System.Windows.Forms.Button addArticlebtn;
         private System.Windows.Forms.Button removeArticlebtn;
         private System.Windows.Forms.Button removeBookbtn;
-        private System.Windows.Forms.Button addBookbtn_l;
+        private System.Windows.Forms.Button addBookbtn;
         private System.Windows.Forms.TextBox yearBox;
         private System.Windows.Forms.TextBox authorBox;
         private System.Windows.Forms.TextBox isbnBox;

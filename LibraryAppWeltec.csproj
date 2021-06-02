@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addNewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewBook.Designer.cs">
+      <DependentUpon>addNewBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articles.cs" />
     <Compile Include="Books.cs" />
     <Compile Include="LibrarianForm.cs">
@@ -75,6 +81,9 @@
     <Compile Include="TutorForm.Designer.cs">
       <DependentUpon>TutorForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addNewBook.resx">
+      <DependentUpon>addNewBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LibrarianForm.resx">
       <DependentUpon>LibrarianForm.cs</DependentUpon>
     </EmbeddedResource>
