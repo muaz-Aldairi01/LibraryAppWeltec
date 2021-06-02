@@ -1,0 +1,4 @@
+﻿Borrowing-Name,Isbn,Author-Name,PublishedYear,Type,DueDate,isRenewed
+Intro to JavaScript,123407761,Maria sharp,2008,Article,3/06/2021,FALSE
+Security Principles,M123J543, Omar Santos,2000,Media,24/05/2021,FALSE
+Physical Security Principles,B016Z1GL46, Michael E. Knoke,2020,Book,18/06/2021,TRUE

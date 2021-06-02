@@ -1,0 +1,4 @@
+﻿Borrowing-Name,Isbn,Author-Name,PublishedYear,Type,DueDate,isRenewed,overdueDays,Penalty
+CIA triad,B016Z14567, Michael Smith,2010,Article,10/06/2021,FALSE,,
+How to use VS,1278901148,John Knapp,2011,Article,1/06/2021,FALSE,,
+DevOps ,MI9976GL46,Sami dou,2015,Media,15/06/2021,TRUE,,

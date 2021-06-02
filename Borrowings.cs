@@ -16,6 +16,8 @@ namespace LibraryAppWeltec
         private string type;
         private DateTime dueDate;
         private bool isRenewed;
+        private int overDueDays;
+        private int penalty;
 
         //properties
         public string BorrowingName { get => borrowingName; set => borrowingName = value; }
@@ -25,5 +27,9 @@ namespace LibraryAppWeltec
         public string Type { get => type; set => type = value; }
         public DateTime DueDate { get => dueDate; set => dueDate = value; }
         public bool IsRenewed { get => isRenewed; set => isRenewed = value; }
+
+        public int OverDueDays { get => overDueDays; set => overDueDays = value; }
+
+        public int Penalty { get => penalty; set => penalty = value; }
     }
 }

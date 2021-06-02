@@ -10,20 +10,19 @@ using System.Windows.Forms;
 
 namespace LibraryAppWeltec
 {
-    public partial class TutorBorrowingsList : Form
+    public partial class StudentBorrowingsList : Form
     {
-       
         SortedDictionary<string, Borrowings> borrowinginfo = new SortedDictionary<string, Borrowings>();
 
-        static string[] borrowing_headings = new string[6]; 
-        
+        static string[] borrowing_headings = new string[6];
+
         Borrowings selectedBorrowing = new Borrowings();
 
-        public TutorBorrowingsList()
+        public StudentBorrowingsList()
         {
             InitializeComponent();
-            
-            var borrowing_path = @"../../datafiles/TutorBorrowings.csv";
+
+            var borrowing_path = @"../../datafiles/StudentBorrowings.csv";
             string[] borrowing_lines = System.IO.File.ReadAllLines(borrowing_path);
             foreach (string line in borrowing_lines)
             {
@@ -45,6 +44,7 @@ namespace LibraryAppWeltec
                         Type = info[4],
                         DueDate = Convert.ToDateTime(info[5]),
                         IsRenewed = Convert.ToBoolean(info[6])
+                        
                     });
                 }
             }
@@ -52,37 +52,33 @@ namespace LibraryAppWeltec
         }
 
         private void refreshForm()
-        { 
+        {
 
-            displayBorrowingsintutorlistbox();
+            displayBorrowingsinstudentlistbox();
 
         }
 
-
-
-        private void displayBorrowingsintutorlistbox()
+        private void displayBorrowingsinstudentlistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
-            tutorlistbox.DataSource = new BindingSource(borrowinginfo, null);
+            studentlistbox.DataSource = new BindingSource(borrowinginfo, null);
 
             //display the entries by key. Read about Listbox control here      
 
-            tutorlistbox.ValueMember = "Key";
+            studentlistbox.ValueMember = "Key";
 
         }
 
-       
-
-        private void tutorListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void studentlistbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (borrowinginfo.ContainsKey(tutorlistbox.SelectedValue.ToString()))
+            if (borrowinginfo.ContainsKey(studentlistbox.SelectedValue.ToString()))
 
-                selectedBorrowing = borrowinginfo[tutorlistbox.SelectedValue.ToString()];
+                selectedBorrowing = borrowinginfo[studentlistbox.SelectedValue.ToString()];
 
-            
-           
-            label2.Text = tutorlistbox.Items.Count.ToString();
+
+
+            label2.Text = studentlistbox.Items.Count.ToString();
 
 
             // Question: from where and how are these (below) data coming?
@@ -93,11 +89,6 @@ namespace LibraryAppWeltec
             typeBox.Text = selectedBorrowing.Type;
             dueDateBox.Text = selectedBorrowing.DueDate.ToString();
             isRenewedBox.Text = selectedBorrowing.IsRenewed.ToString();
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

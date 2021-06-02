@@ -88,11 +88,11 @@
     <Compile Include="StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentInfoForm.cs">
+    <Compile Include="StudentBorrowingsList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentInfoForm.Designer.cs">
-      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    <Compile Include="StudentBorrowingsList.Designer.cs">
+      <DependentUpon>StudentBorrowingsList.cs</DependentUpon>
     </Compile>
     <Compile Include="TutorBorrowingsList.cs">
       <SubType>Form</SubType>
@@ -133,8 +133,8 @@
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentInfoForm.resx">
-      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="StudentBorrowingsList.resx">
+      <DependentUpon>StudentBorrowingsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TutorBorrowingsList.resx">
       <DependentUpon>TutorBorrowingsList.cs</DependentUpon>

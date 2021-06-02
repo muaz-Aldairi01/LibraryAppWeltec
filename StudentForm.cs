@@ -125,8 +125,8 @@ namespace LibraryAppWeltec
         { //simply calls method below
 
             displayBooksinbooklistbox();
-            displayArticlesinbooklistbox();
-            displayMediainbooklistbox();
+            displayArticlesinarticlelistbox();
+            displayMediainmedialistbox();
 
         }
 
@@ -142,7 +142,7 @@ namespace LibraryAppWeltec
 
         }
 
-        private void displayArticlesinbooklistbox()
+        private void displayArticlesinarticlelistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
@@ -154,7 +154,7 @@ namespace LibraryAppWeltec
 
         }
 
-        private void displayMediainbooklistbox()
+        private void displayMediainmedialistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
