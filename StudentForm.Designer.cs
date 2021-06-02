@@ -61,170 +61,191 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(884, 358);
+            this.label13.Location = new System.Drawing.Point(1179, 448);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 20);
+            this.label13.Size = new System.Drawing.Size(58, 25);
             this.label13.TabIndex = 98;
             this.label13.Text = "Year";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(884, 309);
+            this.label12.Location = new System.Drawing.Point(1179, 386);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 20);
+            this.label12.Size = new System.Drawing.Size(75, 25);
             this.label12.TabIndex = 97;
             this.label12.Text = "Author";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(884, 255);
+            this.label11.Location = new System.Drawing.Point(1179, 319);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 20);
+            this.label11.Size = new System.Drawing.Size(60, 25);
             this.label11.TabIndex = 96;
             this.label11.Text = "ISBN";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(884, 204);
+            this.label10.Location = new System.Drawing.Point(1179, 255);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 20);
+            this.label10.Size = new System.Drawing.Size(61, 25);
             this.label10.TabIndex = 95;
             this.label10.Text = "Price";
             // 
             // noresultlbl_l
             // 
             this.noresultlbl_l.AutoSize = true;
-            this.noresultlbl_l.Location = new System.Drawing.Point(672, 64);
+            this.noresultlbl_l.Location = new System.Drawing.Point(896, 80);
+            this.noresultlbl_l.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.noresultlbl_l.Name = "noresultlbl_l";
-            this.noresultlbl_l.Size = new System.Drawing.Size(129, 20);
+            this.noresultlbl_l.Size = new System.Drawing.Size(173, 25);
             this.noresultlbl_l.TabIndex = 94;
             this.noresultlbl_l.Text = "No Result Found";
             // 
             // resultlbl_l
             // 
             this.resultlbl_l.AutoSize = true;
-            this.resultlbl_l.Location = new System.Drawing.Point(505, 64);
+            this.resultlbl_l.Location = new System.Drawing.Point(673, 80);
+            this.resultlbl_l.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.resultlbl_l.Name = "resultlbl_l";
-            this.resultlbl_l.Size = new System.Drawing.Size(108, 20);
+            this.resultlbl_l.Size = new System.Drawing.Size(144, 25);
             this.resultlbl_l.TabIndex = 93;
             this.resultlbl_l.Text = "Results found";
             // 
             // searchlbl_l
             // 
             this.searchlbl_l.AutoSize = true;
-            this.searchlbl_l.Location = new System.Drawing.Point(110, 64);
+            this.searchlbl_l.Location = new System.Drawing.Point(147, 80);
+            this.searchlbl_l.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchlbl_l.Name = "searchlbl_l";
-            this.searchlbl_l.Size = new System.Drawing.Size(60, 20);
+            this.searchlbl_l.Size = new System.Drawing.Size(80, 25);
             this.searchlbl_l.TabIndex = 92;
             this.searchlbl_l.Text = "Search";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(685, 453);
+            this.label6.Location = new System.Drawing.Point(913, 566);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(70, 25);
             this.label6.TabIndex = 91;
             this.label6.Text = "label6";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(592, 453);
+            this.label5.Location = new System.Drawing.Point(789, 566);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(77, 25);
             this.label5.TabIndex = 90;
             this.label5.Text = "entries";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(418, 453);
+            this.label4.Location = new System.Drawing.Point(557, 566);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 89;
             this.label4.Text = "label4";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(321, 453);
+            this.label3.Location = new System.Drawing.Point(428, 566);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 88;
             this.label3.Text = "entries";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(149, 453);
+            this.label2.Location = new System.Drawing.Point(199, 566);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 87;
             this.label2.Text = "label2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 453);
+            this.label1.Location = new System.Drawing.Point(72, 566);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 86;
             this.label1.Text = "entries";
             // 
             // borrowBtn
             // 
-            this.borrowBtn.Location = new System.Drawing.Point(927, 473);
+            this.borrowBtn.Location = new System.Drawing.Point(1236, 591);
+            this.borrowBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.borrowBtn.Name = "borrowBtn";
-            this.borrowBtn.Size = new System.Drawing.Size(152, 54);
+            this.borrowBtn.Size = new System.Drawing.Size(203, 68);
             this.borrowBtn.TabIndex = 85;
             this.borrowBtn.Text = "Borrow";
             this.borrowBtn.UseVisualStyleBackColor = true;
             // 
             // yearBox
             // 
-            this.yearBox.Location = new System.Drawing.Point(993, 358);
+            this.yearBox.Location = new System.Drawing.Point(1324, 448);
+            this.yearBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.yearBox.Name = "yearBox";
-            this.yearBox.Size = new System.Drawing.Size(141, 26);
+            this.yearBox.Size = new System.Drawing.Size(187, 31);
             this.yearBox.TabIndex = 84;
             // 
             // authorBox
             // 
-            this.authorBox.Location = new System.Drawing.Point(993, 309);
+            this.authorBox.Location = new System.Drawing.Point(1324, 386);
+            this.authorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.authorBox.Name = "authorBox";
-            this.authorBox.Size = new System.Drawing.Size(141, 26);
+            this.authorBox.Size = new System.Drawing.Size(187, 31);
             this.authorBox.TabIndex = 83;
             // 
             // isbnBox
             // 
-            this.isbnBox.Location = new System.Drawing.Point(993, 255);
+            this.isbnBox.Location = new System.Drawing.Point(1324, 319);
+            this.isbnBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.isbnBox.Name = "isbnBox";
-            this.isbnBox.Size = new System.Drawing.Size(141, 26);
+            this.isbnBox.Size = new System.Drawing.Size(187, 31);
             this.isbnBox.TabIndex = 82;
             // 
             // priceBox
             // 
-            this.priceBox.Location = new System.Drawing.Point(993, 204);
+            this.priceBox.Location = new System.Drawing.Point(1324, 255);
+            this.priceBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.priceBox.Name = "priceBox";
-            this.priceBox.Size = new System.Drawing.Size(141, 26);
+            this.priceBox.Size = new System.Drawing.Size(187, 31);
             this.priceBox.TabIndex = 81;
             // 
             // searchBox_l
             // 
-            this.searchBox_l.Location = new System.Drawing.Point(199, 66);
+            this.searchBox_l.Location = new System.Drawing.Point(265, 82);
+            this.searchBox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchBox_l.Name = "searchBox_l";
-            this.searchBox_l.Size = new System.Drawing.Size(198, 26);
+            this.searchBox_l.Size = new System.Drawing.Size(263, 31);
             this.searchBox_l.TabIndex = 80;
             // 
             // AvailableArticles_l
             // 
             this.AvailableArticles_l.Controls.Add(this.articlelistbox_l);
-            this.AvailableArticles_l.Location = new System.Drawing.Point(295, 137);
+            this.AvailableArticles_l.Location = new System.Drawing.Point(393, 171);
+            this.AvailableArticles_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AvailableArticles_l.Name = "AvailableArticles_l";
-            this.AvailableArticles_l.Size = new System.Drawing.Size(200, 302);
+            this.AvailableArticles_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableArticles_l.Size = new System.Drawing.Size(267, 378);
             this.AvailableArticles_l.TabIndex = 78;
             this.AvailableArticles_l.TabStop = false;
             this.AvailableArticles_l.Text = "Available Articles";
@@ -232,18 +253,22 @@
             // articlelistbox_l
             // 
             this.articlelistbox_l.FormattingEnabled = true;
-            this.articlelistbox_l.ItemHeight = 20;
-            this.articlelistbox_l.Location = new System.Drawing.Point(15, 39);
+            this.articlelistbox_l.ItemHeight = 25;
+            this.articlelistbox_l.Location = new System.Drawing.Point(20, 49);
+            this.articlelistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.articlelistbox_l.Name = "articlelistbox_l";
-            this.articlelistbox_l.Size = new System.Drawing.Size(168, 244);
+            this.articlelistbox_l.Size = new System.Drawing.Size(223, 304);
             this.articlelistbox_l.TabIndex = 3;
+            this.articlelistbox_l.SelectedIndexChanged += new System.EventHandler(this.articlelistbox_l_SelectedIndexChanged);
             // 
             // AvailableMedia_l
             // 
             this.AvailableMedia_l.Controls.Add(this.medialistbox_l);
-            this.AvailableMedia_l.Location = new System.Drawing.Point(560, 137);
+            this.AvailableMedia_l.Location = new System.Drawing.Point(747, 171);
+            this.AvailableMedia_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AvailableMedia_l.Name = "AvailableMedia_l";
-            this.AvailableMedia_l.Size = new System.Drawing.Size(209, 302);
+            this.AvailableMedia_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableMedia_l.Size = new System.Drawing.Size(279, 378);
             this.AvailableMedia_l.TabIndex = 79;
             this.AvailableMedia_l.TabStop = false;
             this.AvailableMedia_l.Text = "Available Media ";
@@ -251,18 +276,22 @@
             // medialistbox_l
             // 
             this.medialistbox_l.FormattingEnabled = true;
-            this.medialistbox_l.ItemHeight = 20;
-            this.medialistbox_l.Location = new System.Drawing.Point(18, 39);
+            this.medialistbox_l.ItemHeight = 25;
+            this.medialistbox_l.Location = new System.Drawing.Point(24, 49);
+            this.medialistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.medialistbox_l.Name = "medialistbox_l";
-            this.medialistbox_l.Size = new System.Drawing.Size(170, 244);
+            this.medialistbox_l.Size = new System.Drawing.Size(225, 304);
             this.medialistbox_l.TabIndex = 4;
+            this.medialistbox_l.SelectedIndexChanged += new System.EventHandler(this.medialistbox_l_SelectedIndexChanged);
             // 
             // AvailableBooks_l
             // 
             this.AvailableBooks_l.Controls.Add(this.booklistbox_l);
-            this.AvailableBooks_l.Location = new System.Drawing.Point(39, 137);
+            this.AvailableBooks_l.Location = new System.Drawing.Point(52, 171);
+            this.AvailableBooks_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AvailableBooks_l.Name = "AvailableBooks_l";
-            this.AvailableBooks_l.Size = new System.Drawing.Size(200, 313);
+            this.AvailableBooks_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableBooks_l.Size = new System.Drawing.Size(267, 391);
             this.AvailableBooks_l.TabIndex = 77;
             this.AvailableBooks_l.TabStop = false;
             this.AvailableBooks_l.Text = "Available Books";
@@ -270,17 +299,19 @@
             // booklistbox_l
             // 
             this.booklistbox_l.FormattingEnabled = true;
-            this.booklistbox_l.ItemHeight = 20;
-            this.booklistbox_l.Location = new System.Drawing.Point(6, 39);
+            this.booklistbox_l.ItemHeight = 25;
+            this.booklistbox_l.Location = new System.Drawing.Point(8, 49);
+            this.booklistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.booklistbox_l.Name = "booklistbox_l";
-            this.booklistbox_l.Size = new System.Drawing.Size(173, 244);
+            this.booklistbox_l.Size = new System.Drawing.Size(229, 304);
             this.booklistbox_l.TabIndex = 2;
+            this.booklistbox_l.SelectedIndexChanged += new System.EventHandler(this.booklistbox_l_SelectedIndexChanged);
             // 
             // StudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 590);
+            this.ClientSize = new System.Drawing.Size(1563, 738);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -303,6 +334,7 @@
             this.Controls.Add(this.AvailableArticles_l);
             this.Controls.Add(this.AvailableMedia_l);
             this.Controls.Add(this.AvailableBooks_l);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.AvailableArticles_l.ResumeLayout(false);
