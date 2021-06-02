@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.borrowBtn = new System.Windows.Forms.Button();
+            this.viewListBtn = new System.Windows.Forms.Button();
             this.yearBox = new System.Windows.Forms.TextBox();
             this.authorBox = new System.Windows.Forms.TextBox();
             this.isbnBox = new System.Windows.Forms.TextBox();
@@ -188,20 +188,20 @@
             this.label1.TabIndex = 86;
             this.label1.Text = "entries";
             // 
-            // borrowBtn
+            // viewListBtn
             // 
-            this.borrowBtn.Location = new System.Drawing.Point(1236, 591);
-            this.borrowBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.borrowBtn.Name = "borrowBtn";
-            this.borrowBtn.Size = new System.Drawing.Size(203, 68);
-            this.borrowBtn.TabIndex = 85;
-            this.borrowBtn.Text = "Borrow";
-            this.borrowBtn.UseVisualStyleBackColor = true;
+            this.viewListBtn.Location = new System.Drawing.Point(1236, 591);
+            this.viewListBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.viewListBtn.Name = "viewListBtn";
+            this.viewListBtn.Size = new System.Drawing.Size(203, 68);
+            this.viewListBtn.TabIndex = 85;
+            this.viewListBtn.Text = "View borrowed items";
+            this.viewListBtn.UseVisualStyleBackColor = true;
             // 
             // yearBox
             // 
             this.yearBox.Location = new System.Drawing.Point(1324, 448);
-            this.yearBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(187, 31);
             this.yearBox.TabIndex = 84;
@@ -209,7 +209,7 @@
             // authorBox
             // 
             this.authorBox.Location = new System.Drawing.Point(1324, 386);
-            this.authorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.authorBox.Margin = new System.Windows.Forms.Padding(4);
             this.authorBox.Name = "authorBox";
             this.authorBox.Size = new System.Drawing.Size(187, 31);
             this.authorBox.TabIndex = 83;
@@ -217,7 +217,7 @@
             // isbnBox
             // 
             this.isbnBox.Location = new System.Drawing.Point(1324, 319);
-            this.isbnBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isbnBox.Margin = new System.Windows.Forms.Padding(4);
             this.isbnBox.Name = "isbnBox";
             this.isbnBox.Size = new System.Drawing.Size(187, 31);
             this.isbnBox.TabIndex = 82;
@@ -225,7 +225,7 @@
             // priceBox
             // 
             this.priceBox.Location = new System.Drawing.Point(1324, 255);
-            this.priceBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceBox.Margin = new System.Windows.Forms.Padding(4);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(187, 31);
             this.priceBox.TabIndex = 81;
@@ -233,7 +233,7 @@
             // searchBox_l
             // 
             this.searchBox_l.Location = new System.Drawing.Point(265, 82);
-            this.searchBox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBox_l.Margin = new System.Windows.Forms.Padding(4);
             this.searchBox_l.Name = "searchBox_l";
             this.searchBox_l.Size = new System.Drawing.Size(263, 31);
             this.searchBox_l.TabIndex = 80;
@@ -242,9 +242,9 @@
             // 
             this.AvailableArticles_l.Controls.Add(this.articlelistbox_l);
             this.AvailableArticles_l.Location = new System.Drawing.Point(393, 171);
-            this.AvailableArticles_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableArticles_l.Margin = new System.Windows.Forms.Padding(4);
             this.AvailableArticles_l.Name = "AvailableArticles_l";
-            this.AvailableArticles_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableArticles_l.Padding = new System.Windows.Forms.Padding(4);
             this.AvailableArticles_l.Size = new System.Drawing.Size(267, 378);
             this.AvailableArticles_l.TabIndex = 78;
             this.AvailableArticles_l.TabStop = false;
@@ -255,7 +255,7 @@
             this.articlelistbox_l.FormattingEnabled = true;
             this.articlelistbox_l.ItemHeight = 25;
             this.articlelistbox_l.Location = new System.Drawing.Point(20, 49);
-            this.articlelistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.articlelistbox_l.Margin = new System.Windows.Forms.Padding(4);
             this.articlelistbox_l.Name = "articlelistbox_l";
             this.articlelistbox_l.Size = new System.Drawing.Size(223, 304);
             this.articlelistbox_l.TabIndex = 3;
@@ -265,9 +265,9 @@
             // 
             this.AvailableMedia_l.Controls.Add(this.medialistbox_l);
             this.AvailableMedia_l.Location = new System.Drawing.Point(747, 171);
-            this.AvailableMedia_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableMedia_l.Margin = new System.Windows.Forms.Padding(4);
             this.AvailableMedia_l.Name = "AvailableMedia_l";
-            this.AvailableMedia_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableMedia_l.Padding = new System.Windows.Forms.Padding(4);
             this.AvailableMedia_l.Size = new System.Drawing.Size(279, 378);
             this.AvailableMedia_l.TabIndex = 79;
             this.AvailableMedia_l.TabStop = false;
@@ -278,7 +278,7 @@
             this.medialistbox_l.FormattingEnabled = true;
             this.medialistbox_l.ItemHeight = 25;
             this.medialistbox_l.Location = new System.Drawing.Point(24, 49);
-            this.medialistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.medialistbox_l.Margin = new System.Windows.Forms.Padding(4);
             this.medialistbox_l.Name = "medialistbox_l";
             this.medialistbox_l.Size = new System.Drawing.Size(225, 304);
             this.medialistbox_l.TabIndex = 4;
@@ -288,9 +288,9 @@
             // 
             this.AvailableBooks_l.Controls.Add(this.booklistbox_l);
             this.AvailableBooks_l.Location = new System.Drawing.Point(52, 171);
-            this.AvailableBooks_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableBooks_l.Margin = new System.Windows.Forms.Padding(4);
             this.AvailableBooks_l.Name = "AvailableBooks_l";
-            this.AvailableBooks_l.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvailableBooks_l.Padding = new System.Windows.Forms.Padding(4);
             this.AvailableBooks_l.Size = new System.Drawing.Size(267, 391);
             this.AvailableBooks_l.TabIndex = 77;
             this.AvailableBooks_l.TabStop = false;
@@ -301,7 +301,7 @@
             this.booklistbox_l.FormattingEnabled = true;
             this.booklistbox_l.ItemHeight = 25;
             this.booklistbox_l.Location = new System.Drawing.Point(8, 49);
-            this.booklistbox_l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.booklistbox_l.Margin = new System.Windows.Forms.Padding(4);
             this.booklistbox_l.Name = "booklistbox_l";
             this.booklistbox_l.Size = new System.Drawing.Size(229, 304);
             this.booklistbox_l.TabIndex = 2;
@@ -325,7 +325,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.borrowBtn);
+            this.Controls.Add(this.viewListBtn);
             this.Controls.Add(this.yearBox);
             this.Controls.Add(this.authorBox);
             this.Controls.Add(this.isbnBox);
@@ -334,7 +334,7 @@
             this.Controls.Add(this.AvailableArticles_l);
             this.Controls.Add(this.AvailableMedia_l);
             this.Controls.Add(this.AvailableBooks_l);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.AvailableArticles_l.ResumeLayout(false);
@@ -360,7 +360,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button borrowBtn;
+        private System.Windows.Forms.Button viewListBtn;
         private System.Windows.Forms.TextBox yearBox;
         private System.Windows.Forms.TextBox authorBox;
         private System.Windows.Forms.TextBox isbnBox;
