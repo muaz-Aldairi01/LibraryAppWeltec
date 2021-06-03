@@ -122,7 +122,7 @@ namespace LibraryAppWeltec
         }
 
         private void refreshForm()
-        { //simply calls method below
+        { 
 
             displayBooksinbooklistbox();
             displayArticlesinarticlelistbox();
@@ -132,11 +132,11 @@ namespace LibraryAppWeltec
 
         private void displayBooksinbooklistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
+            
 
             booklistbox_l.DataSource = new BindingSource(bookinfo, null);
 
-            //display the entries by key. Read about Listbox control here      
+                
 
             booklistbox_l.ValueMember = "Key";
 

@@ -43,7 +43,7 @@ namespace LibraryAppWeltec
                         Type = info[4],
                         DueDate = Convert.ToDateTime(info[5]),
                         IsRenewed = Convert.ToBoolean(info[6])
-  
+                        
                     });
                 }
             }
