@@ -88,7 +88,7 @@ namespace LibraryAppWeltec
             dueDateBox.Text = selectedBorrowing.DueDate.ToString();
             isRenewedBox.Text = selectedBorrowing.IsRenewed.ToString();
             overdueDaysBox.Text = selectedBorrowing.OverDueDays.ToString();
-            penaltyBox.Text = selectedBorrowing.Penalty.ToString();
+            //penaltyBox.Text = "$" + selectedBorrowing.Penalty.ToString();
 
         }
 
@@ -105,6 +105,11 @@ namespace LibraryAppWeltec
             {
                 selectedBorrowing.OverDueDays = 0;
             }
+
+        }
+
+        private void penaltyBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

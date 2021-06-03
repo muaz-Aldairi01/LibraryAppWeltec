@@ -80,7 +80,7 @@
             this.Controls.Add(this.addnewMediaCancel);
             this.Controls.Add(this.addnewMediaOk);
             this.Name = "addNewMedia";
-            this.Text = "addNewMedia";
+            this.Text = "Add New Media";
             this.ResumeLayout(false);
             this.PerformLayout();
 

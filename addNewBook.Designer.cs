@@ -81,7 +81,8 @@
             this.Controls.Add(this.addnewBookCancel);
             this.Controls.Add(this.addnewBooKOk);
             this.Name = "addNewBook";
-            this.Text = "addNewBook";
+            this.Text = "Add New Book";
+            this.Load += new System.EventHandler(this.addNewBook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

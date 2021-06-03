@@ -80,7 +80,7 @@
             this.Controls.Add(this.addnewArticleCancel);
             this.Controls.Add(this.addnewArticleOk);
             this.Name = "addNewArticle";
-            this.Text = "addNewArticle";
+            this.Text = "Add New Article";
             this.ResumeLayout(false);
             this.PerformLayout();
 

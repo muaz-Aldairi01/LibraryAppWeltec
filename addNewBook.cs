@@ -34,5 +34,10 @@ namespace LibraryAppWeltec
             this.Close();
 
         }
+
+        private void addNewBook_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
