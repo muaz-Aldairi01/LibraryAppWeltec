@@ -54,7 +54,7 @@ namespace LibraryAppWeltec
             // 
             // yearBox
             // 
-            this.yearBox.Location = new System.Drawing.Point(868, 244);
+            this.yearBox.Location = new System.Drawing.Point(635, 268);
             this.yearBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(229, 31);
@@ -62,7 +62,7 @@ namespace LibraryAppWeltec
             // 
             // authorBox
             // 
-            this.authorBox.Location = new System.Drawing.Point(868, 160);
+            this.authorBox.Location = new System.Drawing.Point(635, 165);
             this.authorBox.Margin = new System.Windows.Forms.Padding(4);
             this.authorBox.Name = "authorBox";
             this.authorBox.Size = new System.Drawing.Size(229, 31);
@@ -70,7 +70,7 @@ namespace LibraryAppWeltec
             // 
             // isbnBox
             // 
-            this.isbnBox.Location = new System.Drawing.Point(868, 88);
+            this.isbnBox.Location = new System.Drawing.Point(635, 113);
             this.isbnBox.Margin = new System.Windows.Forms.Padding(4);
             this.isbnBox.Name = "isbnBox";
             this.isbnBox.Size = new System.Drawing.Size(229, 31);
@@ -79,7 +79,7 @@ namespace LibraryAppWeltec
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(688, 244);
+            this.label5.Location = new System.Drawing.Point(515, 268);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 25);
@@ -89,7 +89,7 @@ namespace LibraryAppWeltec
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(688, 164);
+            this.label4.Location = new System.Drawing.Point(513, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 25);
@@ -99,7 +99,7 @@ namespace LibraryAppWeltec
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(688, 91);
+            this.label3.Location = new System.Drawing.Point(513, 116);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 25);
@@ -109,17 +109,17 @@ namespace LibraryAppWeltec
             // isRenewed
             // 
             this.isRenewed.AutoSize = true;
-            this.isRenewed.Location = new System.Drawing.Point(663, 473);
+            this.isRenewed.Location = new System.Drawing.Point(515, 417);
             this.isRenewed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.isRenewed.Name = "isRenewed";
-            this.isRenewed.Size = new System.Drawing.Size(128, 25);
+            this.isRenewed.Size = new System.Drawing.Size(102, 25);
             this.isRenewed.TabIndex = 26;
-            this.isRenewed.Text = "Is renewed?";
+            this.isRenewed.Text = "Renewed";
             // 
             // dueDate
             // 
             this.dueDate.AutoSize = true;
-            this.dueDate.Location = new System.Drawing.Point(675, 403);
+            this.dueDate.Location = new System.Drawing.Point(515, 355);
             this.dueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dueDate.Name = "dueDate";
             this.dueDate.Size = new System.Drawing.Size(99, 25);
@@ -129,7 +129,7 @@ namespace LibraryAppWeltec
             // type
             // 
             this.type.AutoSize = true;
-            this.type.Location = new System.Drawing.Point(699, 327);
+            this.type.Location = new System.Drawing.Point(513, 215);
             this.type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(60, 25);
@@ -158,7 +158,7 @@ namespace LibraryAppWeltec
             // 
             // isRenewedBox
             // 
-            this.isRenewedBox.Location = new System.Drawing.Point(868, 469);
+            this.isRenewedBox.Location = new System.Drawing.Point(635, 417);
             this.isRenewedBox.Margin = new System.Windows.Forms.Padding(4);
             this.isRenewedBox.Name = "isRenewedBox";
             this.isRenewedBox.Size = new System.Drawing.Size(229, 31);
@@ -166,7 +166,7 @@ namespace LibraryAppWeltec
             // 
             // dueDateBox
             // 
-            this.dueDateBox.Location = new System.Drawing.Point(868, 403);
+            this.dueDateBox.Location = new System.Drawing.Point(635, 349);
             this.dueDateBox.Margin = new System.Windows.Forms.Padding(4);
             this.dueDateBox.Name = "dueDateBox";
             this.dueDateBox.Size = new System.Drawing.Size(229, 31);
@@ -174,7 +174,7 @@ namespace LibraryAppWeltec
             // 
             // typeBox
             // 
-            this.typeBox.Location = new System.Drawing.Point(868, 323);
+            this.typeBox.Location = new System.Drawing.Point(636, 215);
             this.typeBox.Margin = new System.Windows.Forms.Padding(4);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(229, 31);
@@ -205,7 +205,7 @@ namespace LibraryAppWeltec
             // 
             // penaltyBox
             // 
-            this.penaltyBox.Location = new System.Drawing.Point(868, 584);
+            this.penaltyBox.Location = new System.Drawing.Point(636, 556);
             this.penaltyBox.Name = "penaltyBox";
             this.penaltyBox.Size = new System.Drawing.Size(229, 31);
             this.penaltyBox.TabIndex = 33;
@@ -213,7 +213,7 @@ namespace LibraryAppWeltec
             // PenatlyLabel
             // 
             this.PenatlyLabel.AutoSize = true;
-            this.PenatlyLabel.Location = new System.Drawing.Point(630, 584);
+            this.PenatlyLabel.Location = new System.Drawing.Point(469, 556);
             this.PenatlyLabel.Name = "PenatlyLabel";
             this.PenatlyLabel.Size = new System.Drawing.Size(161, 25);
             this.PenatlyLabel.TabIndex = 34;
@@ -222,15 +222,15 @@ namespace LibraryAppWeltec
             // overduedayslabel
             // 
             this.overduedayslabel.AutoSize = true;
-            this.overduedayslabel.Location = new System.Drawing.Point(645, 533);
+            this.overduedayslabel.Location = new System.Drawing.Point(472, 504);
             this.overduedayslabel.Name = "overduedayslabel";
-            this.overduedayslabel.Size = new System.Drawing.Size(146, 25);
+            this.overduedayslabel.Size = new System.Drawing.Size(145, 25);
             this.overduedayslabel.TabIndex = 35;
-            this.overduedayslabel.Text = "Overdue days";
+            this.overduedayslabel.Text = "Days overdue";
             // 
             // overdueDaysBox
             // 
-            this.overdueDaysBox.Location = new System.Drawing.Point(868, 526);
+            this.overdueDaysBox.Location = new System.Drawing.Point(635, 504);
             this.overdueDaysBox.Name = "overdueDaysBox";
             this.overdueDaysBox.Size = new System.Drawing.Size(229, 31);
             this.overdueDaysBox.TabIndex = 36;
@@ -239,7 +239,7 @@ namespace LibraryAppWeltec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 714);
+            this.ClientSize = new System.Drawing.Size(937, 714);
             this.Controls.Add(this.overdueDaysBox);
             this.Controls.Add(this.overduedayslabel);
             this.Controls.Add(this.PenatlyLabel);

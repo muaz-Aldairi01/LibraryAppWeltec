@@ -225,6 +225,91 @@ namespace LibraryAppWeltec
 
         }
 
+        private void searchBox_l_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox_l.Text != "")
+            {
+                if (searchBox_l.Text.Length == 1)
+                {
+                    searchBox_l.Text = searchBox_l.Text.ToString().ToUpper();
+                    searchBox_l.Select(searchBox_l.Text.Length, 0);
+                }
+                // search books
+                var filtered_book = bookinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_book.Count > 0)
+                {
+
+                    booklistbox_l.DataSource = new BindingSource(filtered_book, null);
+                    booklistbox_l.ValueMember = "Key";
+                    noResultBookLabel.Visible = false;
+                    resultBookLabel.Visible = true;
+
+                    if (filtered_book.Count == 1) resultBookLabel.Text = filtered_book.Count + " match in Book list";
+
+                    else resultBookLabel.Text = filtered_book.Count + " matches in Book list";
+                }
+                else
+                {
+                    noResultBookLabel.Visible = true;
+                    resultBookLabel.Visible = false;
+                }
+
+                // search articles
+
+                var filtered_article = articleinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_article.Count > 0)
+                {
+
+                    articlelistbox_l.DataSource = new BindingSource(filtered_article, null);
+                    articlelistbox_l.ValueMember = "Key";
+                    noResultArticleLabel.Visible = false;
+                    resultArticlelabel.Visible = true;
+
+                    if (filtered_article.Count == 1) resultArticlelabel.Text = filtered_article.Count + " match in Article list";
+
+                    else resultArticlelabel.Text = filtered_article.Count + " matches in Article list";
+                }
+                else
+                {
+                    noResultArticleLabel.Visible = true;
+                    resultArticlelabel.Visible = false;
+                }
+
+                // search media
+                var filtered_media = mediainfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
+
+                if (filtered_media.Count > 0)
+                {
+
+                    medialistbox_l.DataSource = new BindingSource(filtered_media, null);
+                    medialistbox_l.ValueMember = "Key";
+                    noResultMediaLabel.Visible = false;
+                    resultMediaLabel.Visible = true;
+
+                    if (filtered_media.Count == 1) resultMediaLabel.Text = filtered_media.Count + " match in Media list";
+
+                    else resultMediaLabel.Text = filtered_media.Count + " matches in Media list";
+                }
+                else
+                {
+                    noResultMediaLabel.Visible = true;
+                    resultMediaLabel.Visible = false;
+                }
+
+            }
+            else
+            {
+                displayBooksinbooklistbox();
+                displayArticlesinarticlelistbox();
+                displayMediainmedialistbox();
+                resultBookLabel.Visible = noResultBookLabel.Visible = false;
+                resultArticlelabel.Visible = noResultArticleLabel.Visible = false;
+                resultMediaLabel.Visible = noResultMediaLabel.Visible = false;
+            }
+        }
+
         private void viewListBtn_Click(object sender, EventArgs e)
         {
             StudentBorrowingsList sbl = new StudentBorrowingsList();

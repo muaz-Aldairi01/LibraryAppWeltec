@@ -239,17 +239,17 @@ namespace LibraryAppWeltec
 
                     booklistbox_l.DataSource = new BindingSource(filtered_book, null);
                     booklistbox_l.ValueMember = "Key";
-                    noresultlbl_l.Visible = false;
-                    resultlbl_l.Visible = true;
+                    noResultBookLabel.Visible = false;
+                    resultBookLabel.Visible = true;
 
-                    if (filtered_book.Count == 1) resultlbl_l.Text = filtered_book.Count + " match";
+                    if (filtered_book.Count == 1) resultBookLabel.Text = filtered_book.Count + " match in Book list";
 
-                    else resultlbl_l.Text = filtered_book.Count + " matches";
+                    else resultBookLabel.Text = filtered_book.Count + " matches in Book list";
                 }
                 else
                 {
-                    noresultlbl_l.Visible = true;
-                    resultlbl_l.Visible = false;
+                    noResultBookLabel.Visible = true;
+                    resultBookLabel.Visible = false;
                 }
 
                 // search articles
@@ -261,17 +261,17 @@ namespace LibraryAppWeltec
 
                     articlelistbox_l.DataSource = new BindingSource(filtered_article, null);
                     articlelistbox_l.ValueMember = "Key";
-                    noresultlbl_l.Visible = false;
-                    resultlbl_l.Visible = true;
+                    noResultArticleLabel.Visible = false;
+                    resultArticlelabel.Visible = true;
 
-                    if (filtered_article.Count == 1) resultlbl_l.Text = filtered_article.Count + " match";
+                    if (filtered_article.Count == 1) resultArticlelabel.Text = filtered_article.Count + " match in Article list";
 
-                    else resultlbl_l.Text = filtered_article.Count + " matches";
+                    else resultArticlelabel.Text = filtered_article.Count + " matches in Article list";
                 }
-                if (filtered_article.Count == 0)
+                else
                 {
-                    noresultlbl_l.Visible = true;
-                    resultlbl_l.Visible = false;
+                    noResultArticleLabel.Visible = true;
+                    resultArticlelabel.Visible = false;
                 }
 
                 // search media
@@ -282,17 +282,17 @@ namespace LibraryAppWeltec
 
                     medialistbox_l.DataSource = new BindingSource(filtered_media, null);
                     medialistbox_l.ValueMember = "Key";
-                    noresultlbl_l.Visible = false;
-                    resultlbl_l.Visible = true;
+                    noResultMediaLabel.Visible = false;
+                    resultMediaLabel.Visible = true;
 
-                    if (filtered_media.Count == 1) resultlbl_l.Text = filtered_media.Count + " match";
+                    if (filtered_media.Count == 1) resultMediaLabel.Text = filtered_media.Count + " match in Media list";
 
-                    else resultlbl_l.Text = filtered_media.Count + " matches";
+                    else resultMediaLabel.Text = filtered_media.Count + " matches in Media list";
                 }
                 else
                 {
-                    noresultlbl_l.Visible = true;
-                    resultlbl_l.Visible = false;
+                    noResultMediaLabel.Visible = true;
+                    resultMediaLabel.Visible = false;
                 }
 
             }
@@ -301,7 +301,9 @@ namespace LibraryAppWeltec
                 displayBooksinbooklistbox();
                 displayArticlesinarticlelistbox();
                 displayMediainmedialistbox();
-                resultlbl_l.Visible = noresultlbl_l.Visible = false;
+                resultBookLabel.Visible = noResultBookLabel.Visible = false;
+                resultArticlelabel.Visible = noResultArticleLabel.Visible = false;
+                resultMediaLabel.Visible = noResultMediaLabel.Visible = false;
             }
         }
 

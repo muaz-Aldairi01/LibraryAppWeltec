@@ -32,8 +32,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.noresultlbl_l = new System.Windows.Forms.Label();
-            this.resultlbl_l = new System.Windows.Forms.Label();
             this.searchlbl_l = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,6 +51,13 @@
             this.medialistbox_l = new System.Windows.Forms.ListBox();
             this.AvailableBooks_l = new System.Windows.Forms.GroupBox();
             this.booklistbox_l = new System.Windows.Forms.ListBox();
+            this.infoBox = new System.Windows.Forms.GroupBox();
+            this.noResultArticleLabel = new System.Windows.Forms.Label();
+            this.noResultMediaLabel = new System.Windows.Forms.Label();
+            this.resultArticlelabel = new System.Windows.Forms.Label();
+            this.resultMediaLabel = new System.Windows.Forms.Label();
+            this.noResultBookLabel = new System.Windows.Forms.Label();
+            this.resultBookLabel = new System.Windows.Forms.Label();
             this.AvailableArticles_l.SuspendLayout();
             this.AvailableMedia_l.SuspendLayout();
             this.AvailableBooks_l.SuspendLayout();
@@ -61,7 +66,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1179, 448);
+            this.label13.Location = new System.Drawing.Point(1081, 448);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 25);
@@ -71,7 +76,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1179, 386);
+            this.label12.Location = new System.Drawing.Point(1081, 386);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 25);
@@ -81,7 +86,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1179, 319);
+            this.label11.Location = new System.Drawing.Point(1081, 319);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 25);
@@ -91,32 +96,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1179, 255);
+            this.label10.Location = new System.Drawing.Point(1081, 255);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 25);
             this.label10.TabIndex = 95;
             this.label10.Text = "Price";
-            // 
-            // noresultlbl_l
-            // 
-            this.noresultlbl_l.AutoSize = true;
-            this.noresultlbl_l.Location = new System.Drawing.Point(896, 80);
-            this.noresultlbl_l.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.noresultlbl_l.Name = "noresultlbl_l";
-            this.noresultlbl_l.Size = new System.Drawing.Size(173, 25);
-            this.noresultlbl_l.TabIndex = 94;
-            this.noresultlbl_l.Text = "No Result Found";
-            // 
-            // resultlbl_l
-            // 
-            this.resultlbl_l.AutoSize = true;
-            this.resultlbl_l.Location = new System.Drawing.Point(673, 80);
-            this.resultlbl_l.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.resultlbl_l.Name = "resultlbl_l";
-            this.resultlbl_l.Size = new System.Drawing.Size(144, 25);
-            this.resultlbl_l.TabIndex = 93;
-            this.resultlbl_l.Text = "Results found";
             // 
             // searchlbl_l
             // 
@@ -190,7 +175,7 @@
             // 
             // viewListBtn
             // 
-            this.viewListBtn.Location = new System.Drawing.Point(1236, 591);
+            this.viewListBtn.Location = new System.Drawing.Point(1147, 566);
             this.viewListBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewListBtn.Name = "viewListBtn";
             this.viewListBtn.Size = new System.Drawing.Size(203, 68);
@@ -201,7 +186,7 @@
             // 
             // yearBox
             // 
-            this.yearBox.Location = new System.Drawing.Point(1324, 448);
+            this.yearBox.Location = new System.Drawing.Point(1226, 448);
             this.yearBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(187, 31);
@@ -209,7 +194,7 @@
             // 
             // authorBox
             // 
-            this.authorBox.Location = new System.Drawing.Point(1324, 386);
+            this.authorBox.Location = new System.Drawing.Point(1226, 386);
             this.authorBox.Margin = new System.Windows.Forms.Padding(4);
             this.authorBox.Name = "authorBox";
             this.authorBox.Size = new System.Drawing.Size(187, 31);
@@ -217,7 +202,7 @@
             // 
             // isbnBox
             // 
-            this.isbnBox.Location = new System.Drawing.Point(1324, 319);
+            this.isbnBox.Location = new System.Drawing.Point(1226, 319);
             this.isbnBox.Margin = new System.Windows.Forms.Padding(4);
             this.isbnBox.Name = "isbnBox";
             this.isbnBox.Size = new System.Drawing.Size(187, 31);
@@ -225,7 +210,7 @@
             // 
             // priceBox
             // 
-            this.priceBox.Location = new System.Drawing.Point(1324, 255);
+            this.priceBox.Location = new System.Drawing.Point(1226, 255);
             this.priceBox.Margin = new System.Windows.Forms.Padding(4);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(187, 31);
@@ -238,6 +223,7 @@
             this.searchBox_l.Name = "searchBox_l";
             this.searchBox_l.Size = new System.Drawing.Size(263, 31);
             this.searchBox_l.TabIndex = 80;
+            this.searchBox_l.TextChanged += new System.EventHandler(this.searchBox_l_TextChanged);
             // 
             // AvailableArticles_l
             // 
@@ -308,17 +294,92 @@
             this.booklistbox_l.TabIndex = 2;
             this.booklistbox_l.SelectedIndexChanged += new System.EventHandler(this.booklistbox_l_SelectedIndexChanged);
             // 
+            // infoBox
+            // 
+            this.infoBox.Location = new System.Drawing.Point(1070, 220);
+            this.infoBox.Name = "infoBox";
+            this.infoBox.Size = new System.Drawing.Size(149, 285);
+            this.infoBox.TabIndex = 99;
+            this.infoBox.TabStop = false;
+            this.infoBox.Text = "Info";
+            // 
+            // noResultArticleLabel
+            // 
+            this.noResultArticleLabel.AutoSize = true;
+            this.noResultArticleLabel.Location = new System.Drawing.Point(599, 77);
+            this.noResultArticleLabel.Name = "noResultArticleLabel";
+            this.noResultArticleLabel.Size = new System.Drawing.Size(299, 25);
+            this.noResultArticleLabel.TabIndex = 103;
+            this.noResultArticleLabel.Text = "No Result found in Articles list";
+            this.noResultArticleLabel.Visible = false;
+            // 
+            // noResultMediaLabel
+            // 
+            this.noResultMediaLabel.AutoSize = true;
+            this.noResultMediaLabel.Location = new System.Drawing.Point(599, 115);
+            this.noResultMediaLabel.Name = "noResultMediaLabel";
+            this.noResultMediaLabel.Size = new System.Drawing.Size(287, 25);
+            this.noResultMediaLabel.TabIndex = 105;
+            this.noResultMediaLabel.Text = "No Result found in Media list";
+            this.noResultMediaLabel.Visible = false;
+            // 
+            // resultArticlelabel
+            // 
+            this.resultArticlelabel.AutoSize = true;
+            this.resultArticlelabel.Location = new System.Drawing.Point(603, 77);
+            this.resultArticlelabel.Name = "resultArticlelabel";
+            this.resultArticlelabel.Size = new System.Drawing.Size(295, 25);
+            this.resultArticlelabel.TabIndex = 102;
+            this.resultArticlelabel.Text = "Results found in Articles list   ";
+            this.resultArticlelabel.Visible = false;
+            // 
+            // resultMediaLabel
+            // 
+            this.resultMediaLabel.AutoSize = true;
+            this.resultMediaLabel.Location = new System.Drawing.Point(603, 115);
+            this.resultMediaLabel.Name = "resultMediaLabel";
+            this.resultMediaLabel.Size = new System.Drawing.Size(283, 25);
+            this.resultMediaLabel.TabIndex = 104;
+            this.resultMediaLabel.Text = "Results in Media list             ";
+            this.resultMediaLabel.Visible = false;
+            // 
+            // noResultBookLabel
+            // 
+            this.noResultBookLabel.AutoSize = true;
+            this.noResultBookLabel.Location = new System.Drawing.Point(599, 41);
+            this.noResultBookLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noResultBookLabel.Name = "noResultBookLabel";
+            this.noResultBookLabel.Size = new System.Drawing.Size(295, 25);
+            this.noResultBookLabel.TabIndex = 107;
+            this.noResultBookLabel.Text = "No Result Found in Books list";
+            this.noResultBookLabel.Visible = false;
+            // 
+            // resultBookLabel
+            // 
+            this.resultBookLabel.AutoSize = true;
+            this.resultBookLabel.Location = new System.Drawing.Point(604, 41);
+            this.resultBookLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.resultBookLabel.Name = "resultBookLabel";
+            this.resultBookLabel.Size = new System.Drawing.Size(290, 25);
+            this.resultBookLabel.TabIndex = 106;
+            this.resultBookLabel.Text = "Results found in Books list    ";
+            this.resultBookLabel.Visible = false;
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1563, 738);
+            this.ClientSize = new System.Drawing.Size(1524, 738);
+            this.Controls.Add(this.noResultBookLabel);
+            this.Controls.Add(this.resultBookLabel);
+            this.Controls.Add(this.noResultArticleLabel);
+            this.Controls.Add(this.noResultMediaLabel);
+            this.Controls.Add(this.resultArticlelabel);
+            this.Controls.Add(this.resultMediaLabel);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.noresultlbl_l);
-            this.Controls.Add(this.resultlbl_l);
             this.Controls.Add(this.searchlbl_l);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -335,6 +396,7 @@
             this.Controls.Add(this.AvailableArticles_l);
             this.Controls.Add(this.AvailableMedia_l);
             this.Controls.Add(this.AvailableBooks_l);
+            this.Controls.Add(this.infoBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
@@ -352,8 +414,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label noresultlbl_l;
-        private System.Windows.Forms.Label resultlbl_l;
         private System.Windows.Forms.Label searchlbl_l;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -373,5 +433,12 @@
         private System.Windows.Forms.ListBox medialistbox_l;
         private System.Windows.Forms.GroupBox AvailableBooks_l;
         private System.Windows.Forms.ListBox booklistbox_l;
+        private System.Windows.Forms.GroupBox infoBox;
+        private System.Windows.Forms.Label noResultArticleLabel;
+        private System.Windows.Forms.Label noResultMediaLabel;
+        private System.Windows.Forms.Label resultArticlelabel;
+        private System.Windows.Forms.Label resultMediaLabel;
+        private System.Windows.Forms.Label noResultBookLabel;
+        private System.Windows.Forms.Label resultBookLabel;
     }
 }
