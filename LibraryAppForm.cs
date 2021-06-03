@@ -21,5 +21,24 @@ namespace LibraryAppWeltec
         {
 
         }
+
+        private void librarianBtn_Click(object sender, EventArgs e)
+        {
+            librarianForm lb = new librarianForm();
+            lb.Show();
+        }
+
+        private void tutorBtn_Click(object sender, EventArgs e)
+        {
+            TutorForm tf = new TutorForm();
+            tf.Show();
+        }
+
+        private void studentBtn_Click(object sender, EventArgs e)
+        {
+            StudentForm sf = new StudentForm();
+            sf.Show();
+
+        }
     }
 }

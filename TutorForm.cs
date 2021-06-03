@@ -304,5 +304,11 @@ namespace LibraryAppWeltec
                 resultlbl_l.Visible = noresultlbl_l.Visible = false;
             }
         }
+
+        private void viewListBtn_Click(object sender, EventArgs e)
+        {
+            TutorBorrowingsList tbl = new TutorBorrowingsList();
+            tbl.Show();
+        }
     }
 }

@@ -239,7 +239,7 @@ namespace LibraryAppWeltec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 639);
+            this.ClientSize = new System.Drawing.Size(1159, 714);
             this.Controls.Add(this.overdueDaysBox);
             this.Controls.Add(this.overduedayslabel);
             this.Controls.Add(this.PenatlyLabel);
