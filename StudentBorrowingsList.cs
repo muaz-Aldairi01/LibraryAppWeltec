@@ -31,7 +31,6 @@ namespace LibraryAppWeltec
 
                     borrowing_headings = line.Split(',');
 
-
                 else
                 {
                     string[] info = line.Split(',');
@@ -44,7 +43,7 @@ namespace LibraryAppWeltec
                         Type = info[4],
                         DueDate = Convert.ToDateTime(info[5]),
                         IsRenewed = Convert.ToBoolean(info[6])
-                    
+                        
                     });
                 }
             }
@@ -76,10 +75,9 @@ namespace LibraryAppWeltec
 
                 selectedBorrowing = borrowinginfo[studentlistbox.SelectedValue.ToString()];
 
-
-
             label2.Text = studentlistbox.Items.Count.ToString();
 
+            calculateOverDueDays();
 
             // Question: from where and how are these (below) data coming?
 
@@ -89,6 +87,25 @@ namespace LibraryAppWeltec
             typeBox.Text = selectedBorrowing.Type;
             dueDateBox.Text = selectedBorrowing.DueDate.ToString();
             isRenewedBox.Text = selectedBorrowing.IsRenewed.ToString();
+            overdueDaysBox.Text = selectedBorrowing.OverDueDays.ToString();
+            penaltyBox.Text = selectedBorrowing.Penalty.ToString();
+
+        }
+
+        private void calculateOverDueDays()
+        {
+            selectedBorrowing.OverDueDays = (DateTime.Now - selectedBorrowing.DueDate).Days;
+            if (selectedBorrowing.OverDueDays > 0)
+            {
+                
+                selectedBorrowing.Penalty = selectedBorrowing.OverDueDays * 5;
+
+            }
+            else
+            {
+                selectedBorrowing.OverDueDays = 0;
+            }
+
         }
     }
 }

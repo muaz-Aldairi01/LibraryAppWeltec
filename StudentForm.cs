@@ -224,6 +224,12 @@ namespace LibraryAppWeltec
             yearBox.Text = selectedMedia.PublishedYear.ToString();
 
         }
+
+        private void viewListBtn_Click(object sender, EventArgs e)
+        {
+            StudentBorrowingsList sbl = new StudentBorrowingsList();
+            sbl.Show();
+        }
     }
 }
 

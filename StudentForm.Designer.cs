@@ -197,6 +197,7 @@
             this.viewListBtn.TabIndex = 85;
             this.viewListBtn.Text = "View borrowed items";
             this.viewListBtn.UseVisualStyleBackColor = true;
+            this.viewListBtn.Click += new System.EventHandler(this.viewListBtn_Click);
             // 
             // yearBox
             // 
