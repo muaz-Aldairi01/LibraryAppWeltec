@@ -17,7 +17,7 @@ namespace LibraryAppWeltec
 
 
         //properties
-        public string BookName { get => articleName; set => articleName = value; }
+        public string ArticleName { get => articleName; set => articleName = value; }
         public double Price { get => price; set => price = value; }
         public string Isbn { get => isbn; set => isbn = value; }
         public string Author { get => author; set => author = value; }
