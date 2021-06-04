@@ -12,7 +12,7 @@ namespace LibraryAppWeltec
 {
     public partial class TutorBorrowingsList : Form
     {
-       
+        //Dictionary to store all tutor borrowings
         SortedDictionary<string, Borrowings> borrowinginfo = new SortedDictionary<string, Borrowings>();
 
         static string[] borrowing_headings = new string[6]; 
@@ -22,7 +22,9 @@ namespace LibraryAppWeltec
         public TutorBorrowingsList()
         {
             InitializeComponent();
-            
+
+            // reading data from TutorBorrowings file and store them in the dictionary borrowinginfo
+
             var borrowing_path = @"../../datafiles/TutorBorrowings.csv";
             string[] borrowing_lines = System.IO.File.ReadAllLines(borrowing_path);
             foreach (string line in borrowing_lines)
@@ -51,6 +53,7 @@ namespace LibraryAppWeltec
             refreshForm();
         }
 
+        // creating method for loading data into tutorlistbox 
         private void refreshForm()
         { 
 
@@ -59,34 +62,23 @@ namespace LibraryAppWeltec
         }
 
 
-
+        // creating method to display Borrowings in tutorlistbox
         private void displayBorrowingsintutorlistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
+            //bind tutorlistbox to borrowinginfo Dictionary collection.
 
-            tutorlistbox.DataSource = new BindingSource(borrowinginfo, null);
-
-            //display the entries by key. Read about Listbox control here      
-
+            tutorlistbox.DataSource = new BindingSource(borrowinginfo, null);    
             tutorlistbox.ValueMember = "Key";
 
         }
 
-       
-
+        // Adding an event "Selectedindexchanged" on tutorlistbox
         private void tutorListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (borrowinginfo.ContainsKey(tutorlistbox.SelectedValue.ToString()))
 
-                selectedBorrowing = borrowinginfo[tutorlistbox.SelectedValue.ToString()];
-
-            
-           
+            selectedBorrowing = borrowinginfo[tutorlistbox.SelectedValue.ToString()];      
             label2.Text = tutorlistbox.Items.Count.ToString();
-
-
-            // Question: from where and how are these (below) data coming?
-
             isbnBox.Text = selectedBorrowing.Isbn;
             authorBox.Text = selectedBorrowing.Author;
             yearBox.Text = selectedBorrowing.PublishedYear.ToString();

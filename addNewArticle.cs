@@ -17,6 +17,7 @@ namespace LibraryAppWeltec
             InitializeComponent();
         }
 
+        // Adding a click event on "Ok" button
         private void addnewArticleOk_Click(object sender, EventArgs e)
         {
             Program.newArticleName = addnewArticleBox.Text;
@@ -24,6 +25,7 @@ namespace LibraryAppWeltec
 
         }
 
+        // Adding a click event on "Cancel" button
         private void addnewArticleCancel_Click(object sender, EventArgs e)
         {
             this.Close();

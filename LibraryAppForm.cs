@@ -17,27 +17,30 @@ namespace LibraryAppWeltec
             InitializeComponent();
         }
 
-        private void LibraryAppForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // adding a click event to Librarian button
         private void librarianBtn_Click(object sender, EventArgs e)
         {
             librarianForm lb = new librarianForm();
             lb.Show();
         }
 
+        // adding a click event to Tutor button
         private void tutorBtn_Click(object sender, EventArgs e)
         {
             TutorForm tf = new TutorForm();
             tf.Show();
         }
 
+        // adding a click event to Student button
         private void studentBtn_Click(object sender, EventArgs e)
         {
             StudentForm sf = new StudentForm();
             sf.Show();
+
+        }
+
+        private void LibraryAppForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

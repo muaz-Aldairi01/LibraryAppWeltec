@@ -12,29 +12,34 @@ namespace LibraryAppWeltec
 {
     public partial class TutorForm : Form
     {
+        //Dictionary to store all books
         SortedDictionary<string, Books> bookinfo = new SortedDictionary<string, Books>();
 
         static string[] book_headings = new string[6];
 
         Books selectedBook = new Books();
 
-
+        //Dictionary to store all articles
         SortedDictionary<string, Articles> articleinfo = new SortedDictionary<string, Articles>();
 
         static string[] article_headings = new string[6];
 
         Articles selectedArticle = new Articles();
 
-
+        //Dictionary to store all media items
         SortedDictionary<string, Media> mediainfo = new SortedDictionary<string, Media>();
 
         static string[] media_headings = new string[6];
 
         Media selectedMedia = new Media();
+
+        
         public TutorForm()
         {
             InitializeComponent();
-            // books
+
+            // reading data from Books file and store them in the dictionary bookinfo
+
             var book_path = @"../../datafiles/Books.csv";
             string[] book_lines = System.IO.File.ReadAllLines(book_path);
             foreach (string line in book_lines)
@@ -51,7 +56,6 @@ namespace LibraryAppWeltec
 
                     bookinfo.Add(info[0], new Books
                     {
-
                         Price = Convert.ToDouble(info[1]),
                         Isbn = info[2],
                         Author = info[3],
@@ -60,7 +64,7 @@ namespace LibraryAppWeltec
                 }
             }
 
-            // Articles 
+            // reading data from Articles file and store them in the dictionary aticleinfo
 
             var article_path = @"../../datafiles/Articles.csv";
             string[] article_lines = System.IO.File.ReadAllLines(article_path);
@@ -78,7 +82,6 @@ namespace LibraryAppWeltec
 
                     articleinfo.Add(info[0], new Articles
                     {
-
                         Price = Convert.ToDouble(info[1]),
                         Isbn = info[2],
                         Author = info[3],
@@ -87,7 +90,7 @@ namespace LibraryAppWeltec
                 }
             }
 
-            // Media
+            // reading data from Media file and store them in the dictionary mediainfo
 
             var media_path = @"../../datafiles/Media.csv";
             string[] media_lines = System.IO.File.ReadAllLines(media_path);
@@ -105,7 +108,6 @@ namespace LibraryAppWeltec
 
                     mediainfo.Add(info[0], new Media
                     {
-
                         Price = Convert.ToDouble(info[1]),
                         Isbn = info[2],
                         Author = info[3],
@@ -117,66 +119,52 @@ namespace LibraryAppWeltec
             refreshForm();
         }
 
+        // creating method for loading data into listboxs 
         private void refreshForm()
-        { //simply calls method below
-
+        { 
             displayBooksinbooklistbox();
             displayArticlesinarticlelistbox();
             displayMediainmedialistbox();
-
         }
 
 
-
+        // creating method to display Books in booklistbox
         private void displayBooksinbooklistbox()
         {
             //bind booklistbox to bookinfo Dictionary collection.
 
-            booklistbox_l.DataSource = new BindingSource(bookinfo, null);
-
-            //display the entries by key. Read about Listbox control here      
-
+            booklistbox_l.DataSource = new BindingSource(bookinfo, null);             
             booklistbox_l.ValueMember = "Key";
 
         }
 
+        // creating method to display Articles in articlelistbox
         private void displayArticlesinarticlelistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
+            //bind articlelistbox to articleinfo Dictionary collection.
 
-            articlelistbox_l.DataSource = new BindingSource(articleinfo, null);
-
-            //display the entries by key. Read about Listbox control here      
-
+            articlelistbox_l.DataSource = new BindingSource(articleinfo, null);               
             articlelistbox_l.ValueMember = "Key";
 
         }
 
+        // creating method to display Media items in medialistbox
         private void displayMediainmedialistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
+            //bind medialistbox to mediainfo Dictionary collection.
 
-            medialistbox_l.DataSource = new BindingSource(mediainfo, null);
-
-            //display the entries by key. Read about Listbox control here      
-
+            medialistbox_l.DataSource = new BindingSource(mediainfo, null);     
             medialistbox_l.ValueMember = "Key";
 
         }
 
+        // Adding an event "Selectedindexchanged" on booklistbox
         private void booklistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (bookinfo.ContainsKey(booklistbox_l.SelectedValue.ToString()))
 
-                //update selected Book
-                selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];
-
-            // Just for count of no. of entries in both listboxes
+            selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];          
             label2.Text = booklistbox_l.Items.Count.ToString();
-
-
-            // Question: from where and how are these (below) data coming?
-
             priceBox.Text = selectedBook.Price.ToString();
             isbnBox.Text = selectedBook.Isbn;
             authorBox.Text = selectedBook.Author;
@@ -184,44 +172,35 @@ namespace LibraryAppWeltec
 
         }
 
+        // Adding an event "Selectedindexchanged" on articlelistbox
         private void articlelistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (articleinfo.ContainsKey(articlelistbox_l.SelectedValue.ToString()))
-
-                //update selected Book
-                selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
-
-            // Just for count of no. of entries in both listboxes
-            label4.Text = articlelistbox_l.Items.Count.ToString();
-
-
-            // Question: from where and how are these (below) data coming?
-
+               
+            selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
+            label4.Text = articlelistbox_l.Items.Count.ToString();   
             priceBox.Text = selectedArticle.Price.ToString();
             isbnBox.Text = selectedArticle.Isbn;
             authorBox.Text = selectedArticle.Author;
             yearBox.Text = selectedArticle.PublishedYear.ToString();
         }
 
+        // Adding an event "Selectedindexchanged" on medialistbox
         private void medialistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (mediainfo.ContainsKey(medialistbox_l.SelectedValue.ToString()))
-
-                //update selected Book
-                selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];
-
-            // Just for count of no. of entries in both listboxes
+              
+            selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];       
             label6.Text = medialistbox_l.Items.Count.ToString();
-
-
-            // Question: from where and how are these (below) data coming?
-
             priceBox.Text = selectedMedia.Price.ToString();
             isbnBox.Text = selectedMedia.Isbn;
             authorBox.Text = selectedMedia.Author;
             yearBox.Text = selectedMedia.PublishedYear.ToString();
         }
 
+        // searching items from the search bar 
+
+        // Adding  a "TextChanged" event to "searchBox" text box 
         private void searchBox_l_TextChanged(object sender, EventArgs e)
         {
             if (searchBox_l.Text != "")
@@ -231,12 +210,12 @@ namespace LibraryAppWeltec
                     searchBox_l.Text = searchBox_l.Text.ToString().ToUpper();
                     searchBox_l.Select(searchBox_l.Text.Length, 0);
                 }
+
                 // search books
                 var filtered_book = bookinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
 
                 if (filtered_book.Count > 0)
                 {
-
                     booklistbox_l.DataSource = new BindingSource(filtered_book, null);
                     booklistbox_l.ValueMember = "Key";
                     noResultBookLabel.Visible = false;
@@ -258,7 +237,6 @@ namespace LibraryAppWeltec
 
                 if (filtered_article.Count > 0)
                 {
-
                     articlelistbox_l.DataSource = new BindingSource(filtered_article, null);
                     articlelistbox_l.ValueMember = "Key";
                     noResultArticleLabel.Visible = false;
@@ -279,7 +257,6 @@ namespace LibraryAppWeltec
 
                 if (filtered_media.Count > 0)
                 {
-
                     medialistbox_l.DataSource = new BindingSource(filtered_media, null);
                     medialistbox_l.ValueMember = "Key";
                     noResultMediaLabel.Visible = false;

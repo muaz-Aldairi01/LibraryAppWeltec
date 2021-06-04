@@ -17,6 +17,7 @@ namespace LibraryAppWeltec
             InitializeComponent();
         }
 
+        // Adding a click event on "Ok" button
         private void addnewMediaOk_Click(object sender, EventArgs e)
         {
             Program.newMediaName = addnewMediaBox.Text;
@@ -24,6 +25,7 @@ namespace LibraryAppWeltec
 
         }
 
+        // Adding a click event on "Cancel" button
         private void addnewMediaCancel_Click(object sender, EventArgs e)
         {
             this.Close();

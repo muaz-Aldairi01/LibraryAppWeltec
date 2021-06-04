@@ -12,6 +12,7 @@ namespace LibraryAppWeltec
 {
     public partial class StudentBorrowingsList : Form
     {
+        //Dictionary to store all student borrowings
         SortedDictionary<string, Borrowings> borrowinginfo = new SortedDictionary<string, Borrowings>();
 
         static string[] borrowing_headings = new string[6];
@@ -21,6 +22,8 @@ namespace LibraryAppWeltec
         public StudentBorrowingsList()
         {
             InitializeComponent();
+
+            // reading data from StudentBorrowings file and store them in the dictionary borrowinginfo
 
             var borrowing_path = @"../../datafiles/StudentBorrowings.csv";
             string[] borrowing_lines = System.IO.File.ReadAllLines(borrowing_path);
@@ -50,6 +53,7 @@ namespace LibraryAppWeltec
             refreshForm();
         }
 
+        // creating method for loading data into studentlistbox 
         private void refreshForm()
         {
 
@@ -57,30 +61,25 @@ namespace LibraryAppWeltec
 
         }
 
+        // creating method to display Borrowings in studentlistbox
         private void displayBorrowingsinstudentlistbox()
         {
-            //bind booklistbox to bookinfo Dictionary collection.
+            //bind studentlistbox to borrowinginfo Dictionary collection.
 
-            studentlistbox.DataSource = new BindingSource(borrowinginfo, null);
-
-            //display the entries by key. Read about Listbox control here      
-
+            studentlistbox.DataSource = new BindingSource(borrowinginfo, null);     
             studentlistbox.ValueMember = "Key";
 
         }
 
+        // Adding an event "Selectedindexchanged" on tutorlistbox
         private void studentlistbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (borrowinginfo.ContainsKey(studentlistbox.SelectedValue.ToString()))
-
-                selectedBorrowing = borrowinginfo[studentlistbox.SelectedValue.ToString()];
-
-            label2.Text = studentlistbox.Items.Count.ToString();
-
             calculateOverDueDays();
 
-            // Question: from where and how are these (below) data coming?
+            if (borrowinginfo.ContainsKey(studentlistbox.SelectedValue.ToString()))
 
+            selectedBorrowing = borrowinginfo[studentlistbox.SelectedValue.ToString()];
+            label2.Text = studentlistbox.Items.Count.ToString();
             isbnBox.Text = selectedBorrowing.Isbn;
             authorBox.Text = selectedBorrowing.Author;
             yearBox.Text = selectedBorrowing.PublishedYear.ToString();
@@ -92,14 +91,13 @@ namespace LibraryAppWeltec
 
         }
 
+        // creating method to calculate overdue days and the panelty
         private void calculateOverDueDays()
         {
             selectedBorrowing.OverDueDays = (DateTime.Now - selectedBorrowing.DueDate).Days;
             if (selectedBorrowing.OverDueDays > 0)
-            {
-                
+            {                
                 selectedBorrowing.Penalty = selectedBorrowing.OverDueDays * 5;
-
             }
             else
             {

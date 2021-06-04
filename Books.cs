@@ -21,7 +21,6 @@ namespace LibraryAppWeltec
         public double Price { get => price; set => price = value; }
         public string Isbn { get => isbn; set => isbn = value; }
         public string Author { get => author; set => author = value; }
-
         public int PublishedYear { get => publishedYear; set => publishedYear = value; }
 
     }

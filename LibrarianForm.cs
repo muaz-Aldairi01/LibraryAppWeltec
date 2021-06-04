@@ -12,21 +12,21 @@ namespace LibraryAppWeltec
 {
     public partial class librarianForm : Form
     {
-  
+        //Dictionary to store all books
         SortedDictionary<string, Books> bookinfo = new SortedDictionary<string, Books>();
 
         static string[] book_headings = new string[6]; 
 
         Books selectedBook = new Books();
 
-
+        //Dictionary to store all  articles
         SortedDictionary<string, Articles> articleinfo = new SortedDictionary<string, Articles>();
 
         static string[] article_headings = new string[6];
 
         Articles selectedArticle = new Articles();
 
-
+        //Dictionary to store all media items
         SortedDictionary<string, Media> mediainfo = new SortedDictionary<string, Media>();
 
         static string[] media_headings = new string[6];
@@ -37,7 +37,8 @@ namespace LibraryAppWeltec
         {
             InitializeComponent();
 
-            // books
+            // reading data from Books file and store them in the dictionary bookinfo
+
             var book_path = @"../../datafiles/Books.csv"; 
             string[] book_lines = System.IO.File.ReadAllLines(book_path);
             foreach (string line in book_lines)
@@ -63,7 +64,7 @@ namespace LibraryAppWeltec
                 }
             }
 
-            // Articles 
+            // reading data from Articles file and store them in the dictionary articleinfo
 
             var article_path = @"../../datafiles/Articles.csv";
             string[] article_lines = System.IO.File.ReadAllLines(article_path);
@@ -90,7 +91,7 @@ namespace LibraryAppWeltec
                 }
             }
 
-            // Media
+            // reading data from Media file and store them in the dictionary mediainfo
 
             var media_path = @"../../datafiles/Media.csv";
             string[] media_lines = System.IO.File.ReadAllLines(media_path);
@@ -121,6 +122,7 @@ namespace LibraryAppWeltec
 
         }
 
+        // creating method for loading data into listboxs 
         private void refreshForm()
         {
 
@@ -130,49 +132,41 @@ namespace LibraryAppWeltec
 
         }
 
-
-
+        // creating method to display Books in booklistbox
         private void displayBooksinbooklistbox()
         {
-
+            //bind booklistbox to bookinfo Dictionary collection.
             booklistbox_l.DataSource = new BindingSource(bookinfo, null);      
-
             booklistbox_l.ValueMember = "Key";
 
         }
 
+        // creating method to display Articles in articlelistbox
         private void displayArticlesinarticlelistbox()
         {
-
+            //bind articlelistbox to articleinfo Dictionary collection.
             articlelistbox_l.DataSource = new BindingSource(articleinfo, null);      
-
             articlelistbox_l.ValueMember = "Key";
 
         }
 
+        // creating method to display media items in medialistbox
         private void displayMediainmedialistbox()
         {
-
+            //bind articlelistbox to articleinfo Dictionary collection.
             medialistbox_l.DataSource = new BindingSource(mediainfo, null);     
-
             medialistbox_l.ValueMember = "Key";
 
         }
 
-
+        // Adding an event "Selectedindexchanged" on booklistbox
         private void booklistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (bookinfo.ContainsKey(booklistbox_l.SelectedValue.ToString()))
 
              
-                selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];
-
-            
+            selectedBook = bookinfo[booklistbox_l.SelectedValue.ToString()];
             label2.Text = booklistbox_l.Items.Count.ToString();
-
-
-            
-
             priceBox.Text = selectedBook.Price.ToString();
             isbnBox.Text = selectedBook.Isbn;
             authorBox.Text = selectedBook.Author;
@@ -180,34 +174,28 @@ namespace LibraryAppWeltec
 
         }
 
+        // Adding an event "Selectedindexchanged" on articlelistbox
         private void articlelistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (articleinfo.ContainsKey(articlelistbox_l.SelectedValue.ToString()))
 
               
-                selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
-
-         
+            selectedArticle = articleinfo[articlelistbox_l.SelectedValue.ToString()];
             label4.Text = articlelistbox_l.Items.Count.ToString();
-
-
             priceBox.Text = selectedArticle.Price.ToString();
             isbnBox.Text = selectedArticle.Isbn;
             authorBox.Text = selectedArticle.Author;
             yearBox.Text = selectedArticle.PublishedYear.ToString();
         }
 
+        // Adding an event "Selectedindexchanged" on medialistbox
         private void medialistbox_l_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (mediainfo.ContainsKey(medialistbox_l.SelectedValue.ToString()))
 
              
-                selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];
-
-            
+            selectedMedia = mediainfo[medialistbox_l.SelectedValue.ToString()];
             label6.Text = medialistbox_l.Items.Count.ToString();
-
-
             priceBox.Text = selectedMedia.Price.ToString();
             isbnBox.Text = selectedMedia.Isbn;
             authorBox.Text = selectedMedia.Author;
@@ -218,7 +206,6 @@ namespace LibraryAppWeltec
         // Add book button
         private void addBookbtn_Click(object sender, EventArgs e)
         {
-
             addNewBook ab = new addNewBook();
 
             ab.FormClosed += new FormClosedEventHandler(addBookFormClosed);
@@ -228,22 +215,19 @@ namespace LibraryAppWeltec
 
         void addBookFormClosed(object sender, FormClosedEventArgs e)
         {
-
             if (Program.newBookName != null)
                 bookinfo.Add(Program.newBookName, new Books
                 {
                     Price = 0,
                     Isbn = null,
                     Author = null,
-                    PublishedYear = 0,
-                 
+                    PublishedYear = 0,                
                 });
 
             Program.newBookName = null;
             displayBooksinbooklistbox();
         }
-
-       
+      
         // Remove book button
         private void removeBookbtn_Click(object sender, EventArgs e)
         {
@@ -253,7 +237,6 @@ namespace LibraryAppWeltec
 
 
         // Add article button
-
         private void addArticlebtn_Click(object sender, EventArgs e)
         {
             addNewArticle ab = new addNewArticle();
@@ -261,12 +244,10 @@ namespace LibraryAppWeltec
             ab.FormClosed += new FormClosedEventHandler(addArticleFormClosed);
 
             ab.Show();
-
         }
 
         void addArticleFormClosed(object sender, FormClosedEventArgs e)
         {
-
             if (Program.newArticleName != null)
                 articleinfo.Add(Program.newArticleName, new Articles
                 {
@@ -274,7 +255,6 @@ namespace LibraryAppWeltec
                     Isbn = null,
                     Author = null,
                     PublishedYear = 0,
-
                 });
 
             Program.newArticleName = null;
@@ -283,7 +263,6 @@ namespace LibraryAppWeltec
 
        
         // Remove article button
-
         private void removeArticlebtn_Click(object sender, EventArgs e)
         {
             articleinfo.Remove(articlelistbox_l.SelectedValue.ToString());
@@ -303,7 +282,6 @@ namespace LibraryAppWeltec
 
         void addMediaFormClosed(object sender, FormClosedEventArgs e)
         {
-
             if (Program.newMediaName != null)
                 mediainfo.Add(Program.newMediaName, new Media
                 {
@@ -311,16 +289,13 @@ namespace LibraryAppWeltec
                     Isbn = null,
                     Author = null,
                     PublishedYear = 0,
-
                 });
 
             Program.newMediaName = null;
             displayMediainmedialistbox();
         }
 
-
         // Remove media button
-
         private void removeMediabtn_Click(object sender, EventArgs e)
         {
             mediainfo.Remove(medialistbox_l.SelectedValue.ToString());
@@ -347,12 +322,9 @@ namespace LibraryAppWeltec
             selectedMedia.PublishedYear = Int32.Parse(yearBox.Text);
         }
 
+        // searching items from the search bar 
 
-        private void librarianForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // Adding  a "TextChanged" event to "searchBox" text box 
         private void searchBox_l_TextChanged(object sender, EventArgs e)
         {
             if (searchBox_l.Text != "") 
@@ -362,6 +334,7 @@ namespace LibraryAppWeltec
                     searchBox_l.Text = searchBox_l.Text.ToString().ToUpper();
                     searchBox_l.Select(searchBox_l.Text.Length, 0);
                 }
+
                 // search books
                 var filtered_book = bookinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
 
@@ -384,7 +357,6 @@ namespace LibraryAppWeltec
                 }
 
                 // search articles
-
                 var filtered_article = articleinfo.Where(d => d.Key.Contains(searchBox_l.Text)).ToDictionary(d => d.Key, d => d.Value);
 
                 if (filtered_article.Count > 0)
@@ -436,6 +408,11 @@ namespace LibraryAppWeltec
                 resultArticlelabel.Visible = noResultArticleLabel.Visible = false;
                 resultMediaLabel.Visible = noResultMediaLabel.Visible = false;
             }
+
+        }
+
+        private void librarianForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

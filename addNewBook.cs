@@ -17,11 +17,7 @@ namespace LibraryAppWeltec
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Adding a click event on "Ok" button
         private void addnewBooKOk_Click(object sender, EventArgs e)
         {
             Program.newBookName = addnewBookBox.Text;
@@ -29,13 +25,21 @@ namespace LibraryAppWeltec
 
         }
 
+        // Adding a click event on "Cancel" button
         private void addnewBookCancel_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+
+
         private void addNewBook_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
