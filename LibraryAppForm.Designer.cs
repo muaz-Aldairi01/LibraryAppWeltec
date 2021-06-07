@@ -33,14 +33,16 @@
             this.studentBtn = new System.Windows.Forms.Button();
             this.welcoming = new System.Windows.Forms.Label();
             this.choosingUser = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // librarianBtn
             // 
-            this.librarianBtn.Location = new System.Drawing.Point(216, 365);
-            this.librarianBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.librarianBtn.ForeColor = System.Drawing.Color.Black;
+            this.librarianBtn.Location = new System.Drawing.Point(162, 292);
             this.librarianBtn.Name = "librarianBtn";
-            this.librarianBtn.Size = new System.Drawing.Size(141, 58);
+            this.librarianBtn.Size = new System.Drawing.Size(106, 46);
             this.librarianBtn.TabIndex = 0;
             this.librarianBtn.Text = "Librarian";
             this.librarianBtn.UseVisualStyleBackColor = true;
@@ -48,10 +50,9 @@
             // 
             // tutorBtn
             // 
-            this.tutorBtn.Location = new System.Drawing.Point(520, 365);
-            this.tutorBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorBtn.Location = new System.Drawing.Point(390, 292);
             this.tutorBtn.Name = "tutorBtn";
-            this.tutorBtn.Size = new System.Drawing.Size(132, 58);
+            this.tutorBtn.Size = new System.Drawing.Size(99, 46);
             this.tutorBtn.TabIndex = 1;
             this.tutorBtn.Text = "Tutor";
             this.tutorBtn.UseVisualStyleBackColor = true;
@@ -59,10 +60,9 @@
             // 
             // studentBtn
             // 
-            this.studentBtn.Location = new System.Drawing.Point(819, 365);
-            this.studentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.studentBtn.Location = new System.Drawing.Point(614, 292);
             this.studentBtn.Name = "studentBtn";
-            this.studentBtn.Size = new System.Drawing.Size(135, 58);
+            this.studentBtn.Size = new System.Drawing.Size(101, 46);
             this.studentBtn.TabIndex = 2;
             this.studentBtn.Text = "Student";
             this.studentBtn.UseVisualStyleBackColor = true;
@@ -71,37 +71,45 @@
             // welcoming
             // 
             this.welcoming.AutoSize = true;
-            this.welcoming.Location = new System.Drawing.Point(127, 90);
-            this.welcoming.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcoming.Location = new System.Drawing.Point(71, 79);
             this.welcoming.Name = "welcoming";
-            this.welcoming.Size = new System.Drawing.Size(414, 25);
+            this.welcoming.Size = new System.Drawing.Size(305, 20);
             this.welcoming.TabIndex = 3;
             this.welcoming.Text = "Welcom to Learning Commons at WelTec:";
             // 
             // choosingUser
             // 
             this.choosingUser.AutoSize = true;
-            this.choosingUser.Location = new System.Drawing.Point(244, 216);
-            this.choosingUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.choosingUser.Location = new System.Drawing.Point(137, 177);
             this.choosingUser.Name = "choosingUser";
-            this.choosingUser.Size = new System.Drawing.Size(482, 25);
+            this.choosingUser.Size = new System.Drawing.Size(352, 20);
             this.choosingUser.TabIndex = 4;
             this.choosingUser.Text = "Please choose user type to start (who are you ?):";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryAppWeltec.Properties.Resources.Weltec;
+            this.pictureBox1.Location = new System.Drawing.Point(647, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 80);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // LibraryAppForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 530);
+            this.ClientSize = new System.Drawing.Size(930, 424);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.choosingUser);
             this.Controls.Add(this.welcoming);
             this.Controls.Add(this.studentBtn);
             this.Controls.Add(this.tutorBtn);
             this.Controls.Add(this.librarianBtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LibraryAppForm";
             this.Text = "Library App";
             this.Load += new System.EventHandler(this.LibraryAppForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +122,7 @@
         private System.Windows.Forms.Button studentBtn;
         private System.Windows.Forms.Label welcoming;
         private System.Windows.Forms.Label choosingUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

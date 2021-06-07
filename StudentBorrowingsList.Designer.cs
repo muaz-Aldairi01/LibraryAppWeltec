@@ -189,7 +189,7 @@ namespace LibraryAppWeltec
             // penaltyBox
             // 
             this.penaltyBox.Location = new System.Drawing.Point(477, 445);
-            this.penaltyBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.penaltyBox.Margin = new System.Windows.Forms.Padding(2);
             this.penaltyBox.Name = "penaltyBox";
             this.penaltyBox.Size = new System.Drawing.Size(173, 26);
             this.penaltyBox.TabIndex = 33;
@@ -198,6 +198,7 @@ namespace LibraryAppWeltec
             // PenatlyLabel
             // 
             this.PenatlyLabel.AutoSize = true;
+            this.PenatlyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PenatlyLabel.Location = new System.Drawing.Point(352, 445);
             this.PenatlyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PenatlyLabel.Name = "PenatlyLabel";
@@ -208,6 +209,7 @@ namespace LibraryAppWeltec
             // overduedayslabel
             // 
             this.overduedayslabel.AutoSize = true;
+            this.overduedayslabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.overduedayslabel.Location = new System.Drawing.Point(354, 403);
             this.overduedayslabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.overduedayslabel.Name = "overduedayslabel";
@@ -218,7 +220,7 @@ namespace LibraryAppWeltec
             // overdueDaysBox
             // 
             this.overdueDaysBox.Location = new System.Drawing.Point(476, 403);
-            this.overdueDaysBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.overdueDaysBox.Margin = new System.Windows.Forms.Padding(2);
             this.overdueDaysBox.Name = "overdueDaysBox";
             this.overdueDaysBox.Size = new System.Drawing.Size(173, 26);
             this.overdueDaysBox.TabIndex = 36;
@@ -247,7 +249,7 @@ namespace LibraryAppWeltec
             this.Controls.Add(this.dueDateBox);
             this.Controls.Add(this.typeBox);
             this.Controls.Add(this.tutorList);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentBorrowingsList";
             this.Text = "Student Borrowings List";
             this.tutorList.ResumeLayout(false);

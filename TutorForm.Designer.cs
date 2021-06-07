@@ -261,7 +261,7 @@
             // viewListBtn
             // 
             this.viewListBtn.Location = new System.Drawing.Point(867, 455);
-            this.viewListBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.viewListBtn.Margin = new System.Windows.Forms.Padding(2);
             this.viewListBtn.Name = "viewListBtn";
             this.viewListBtn.Size = new System.Drawing.Size(142, 56);
             this.viewListBtn.TabIndex = 77;
@@ -272,9 +272,9 @@
             // infoBox
             // 
             this.infoBox.Location = new System.Drawing.Point(792, 178);
-            this.infoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoBox.Margin = new System.Windows.Forms.Padding(2);
             this.infoBox.Name = "infoBox";
-            this.infoBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoBox.Padding = new System.Windows.Forms.Padding(2);
             this.infoBox.Size = new System.Drawing.Size(112, 246);
             this.infoBox.TabIndex = 100;
             this.infoBox.TabStop = false;
@@ -283,6 +283,7 @@
             // noResultArticleLabel
             // 
             this.noResultArticleLabel.AutoSize = true;
+            this.noResultArticleLabel.ForeColor = System.Drawing.Color.Red;
             this.noResultArticleLabel.Location = new System.Drawing.Point(454, 66);
             this.noResultArticleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.noResultArticleLabel.Name = "noResultArticleLabel";
@@ -294,6 +295,7 @@
             // noResultMediaLabel
             // 
             this.noResultMediaLabel.AutoSize = true;
+            this.noResultMediaLabel.ForeColor = System.Drawing.Color.Red;
             this.noResultMediaLabel.Location = new System.Drawing.Point(454, 97);
             this.noResultMediaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.noResultMediaLabel.Name = "noResultMediaLabel";
@@ -327,6 +329,7 @@
             // noResultBookLabel
             // 
             this.noResultBookLabel.AutoSize = true;
+            this.noResultBookLabel.ForeColor = System.Drawing.Color.Red;
             this.noResultBookLabel.Location = new System.Drawing.Point(454, 37);
             this.noResultBookLabel.Name = "noResultBookLabel";
             this.noResultBookLabel.Size = new System.Drawing.Size(217, 20);
