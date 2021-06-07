@@ -89,7 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibraryAppWeltec.Properties.Resources.Weltec;
-            this.pictureBox1.Location = new System.Drawing.Point(647, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(614, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 80);
             this.pictureBox1.TabIndex = 5;
