@@ -83,9 +83,9 @@ namespace LibraryAppWeltec.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Weltec {
+        internal static System.Drawing.Bitmap weltec {
             get {
-                object obj = ResourceManager.GetObject("Weltec", resourceCulture);
+                object obj = ResourceManager.GetObject("weltec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

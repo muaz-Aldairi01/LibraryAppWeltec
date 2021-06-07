@@ -86,10 +86,5 @@ namespace LibraryAppWeltec
             dueDateBox.Text = selectedBorrowing.DueDate.ToString();
             isRenewedBox.Text = selectedBorrowing.IsRenewed.ToString();
         }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

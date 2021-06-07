@@ -105,10 +105,5 @@ namespace LibraryAppWeltec
             }
 
         }
-
-        private void penaltyBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

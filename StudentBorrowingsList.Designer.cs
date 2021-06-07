@@ -54,124 +54,140 @@ namespace LibraryAppWeltec
             // 
             // yearBox
             // 
-            this.yearBox.Location = new System.Drawing.Point(476, 214);
+            this.yearBox.Location = new System.Drawing.Point(635, 268);
+            this.yearBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.yearBox.Name = "yearBox";
-            this.yearBox.Size = new System.Drawing.Size(173, 26);
+            this.yearBox.Size = new System.Drawing.Size(229, 31);
             this.yearBox.TabIndex = 32;
             // 
             // authorBox
             // 
-            this.authorBox.Location = new System.Drawing.Point(476, 132);
+            this.authorBox.Location = new System.Drawing.Point(635, 165);
+            this.authorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.authorBox.Name = "authorBox";
-            this.authorBox.Size = new System.Drawing.Size(173, 26);
+            this.authorBox.Size = new System.Drawing.Size(229, 31);
             this.authorBox.TabIndex = 31;
             // 
             // isbnBox
             // 
-            this.isbnBox.Location = new System.Drawing.Point(476, 90);
+            this.isbnBox.Location = new System.Drawing.Point(635, 112);
+            this.isbnBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.isbnBox.Name = "isbnBox";
-            this.isbnBox.Size = new System.Drawing.Size(173, 26);
+            this.isbnBox.Size = new System.Drawing.Size(229, 31);
             this.isbnBox.TabIndex = 30;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(386, 214);
+            this.label5.Location = new System.Drawing.Point(515, 268);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.Size = new System.Drawing.Size(58, 25);
             this.label5.TabIndex = 29;
             this.label5.Text = "Year";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(385, 132);
+            this.label4.Location = new System.Drawing.Point(513, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 28;
             this.label4.Text = "Author";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(385, 93);
+            this.label3.Location = new System.Drawing.Point(513, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.Size = new System.Drawing.Size(60, 25);
             this.label3.TabIndex = 27;
             this.label3.Text = "ISBN";
             // 
             // isRenewed
             // 
             this.isRenewed.AutoSize = true;
-            this.isRenewed.Location = new System.Drawing.Point(386, 334);
+            this.isRenewed.Location = new System.Drawing.Point(515, 418);
+            this.isRenewed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.isRenewed.Name = "isRenewed";
-            this.isRenewed.Size = new System.Drawing.Size(77, 20);
+            this.isRenewed.Size = new System.Drawing.Size(102, 25);
             this.isRenewed.TabIndex = 26;
             this.isRenewed.Text = "Renewed";
             // 
             // dueDate
             // 
             this.dueDate.AutoSize = true;
-            this.dueDate.Location = new System.Drawing.Point(386, 284);
+            this.dueDate.Location = new System.Drawing.Point(515, 355);
+            this.dueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dueDate.Name = "dueDate";
-            this.dueDate.Size = new System.Drawing.Size(75, 20);
+            this.dueDate.Size = new System.Drawing.Size(99, 25);
             this.dueDate.TabIndex = 25;
             this.dueDate.Text = "Due date";
             // 
             // type
             // 
             this.type.AutoSize = true;
-            this.type.Location = new System.Drawing.Point(385, 172);
+            this.type.Location = new System.Drawing.Point(513, 215);
+            this.type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(43, 20);
+            this.type.Size = new System.Drawing.Size(60, 25);
             this.type.TabIndex = 24;
             this.type.Text = "Type";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 438);
+            this.label2.Location = new System.Drawing.Point(293, 548);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "label2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 438);
+            this.label1.Location = new System.Drawing.Point(128, 548);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Entries";
             // 
             // isRenewedBox
             // 
-            this.isRenewedBox.Location = new System.Drawing.Point(476, 334);
+            this.isRenewedBox.Location = new System.Drawing.Point(635, 418);
+            this.isRenewedBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.isRenewedBox.Name = "isRenewedBox";
-            this.isRenewedBox.Size = new System.Drawing.Size(173, 26);
+            this.isRenewedBox.Size = new System.Drawing.Size(229, 31);
             this.isRenewedBox.TabIndex = 21;
             // 
             // dueDateBox
             // 
-            this.dueDateBox.Location = new System.Drawing.Point(476, 279);
+            this.dueDateBox.Location = new System.Drawing.Point(635, 349);
+            this.dueDateBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dueDateBox.Name = "dueDateBox";
-            this.dueDateBox.Size = new System.Drawing.Size(173, 26);
+            this.dueDateBox.Size = new System.Drawing.Size(229, 31);
             this.dueDateBox.TabIndex = 20;
             // 
             // typeBox
             // 
-            this.typeBox.Location = new System.Drawing.Point(477, 172);
+            this.typeBox.Location = new System.Drawing.Point(636, 215);
+            this.typeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(173, 26);
+            this.typeBox.Size = new System.Drawing.Size(229, 31);
             this.typeBox.TabIndex = 19;
             // 
             // tutorList
             // 
             this.tutorList.Controls.Add(this.studentlistbox);
-            this.tutorList.Location = new System.Drawing.Point(52, 62);
+            this.tutorList.Location = new System.Drawing.Point(69, 78);
+            this.tutorList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tutorList.Name = "tutorList";
-            this.tutorList.Size = new System.Drawing.Size(269, 361);
+            this.tutorList.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorList.Size = new System.Drawing.Size(359, 451);
             this.tutorList.TabIndex = 18;
             this.tutorList.TabStop = false;
             this.tutorList.Text = "Borrowing List";
@@ -179,30 +195,29 @@ namespace LibraryAppWeltec
             // studentlistbox
             // 
             this.studentlistbox.FormattingEnabled = true;
-            this.studentlistbox.ItemHeight = 20;
-            this.studentlistbox.Location = new System.Drawing.Point(13, 26);
+            this.studentlistbox.ItemHeight = 25;
+            this.studentlistbox.Location = new System.Drawing.Point(17, 32);
+            this.studentlistbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.studentlistbox.Name = "studentlistbox";
-            this.studentlistbox.Size = new System.Drawing.Size(241, 304);
+            this.studentlistbox.Size = new System.Drawing.Size(320, 379);
             this.studentlistbox.TabIndex = 0;
             this.studentlistbox.SelectedIndexChanged += new System.EventHandler(this.studentlistbox_SelectedIndexChanged);
             // 
             // penaltyBox
             // 
-            this.penaltyBox.Location = new System.Drawing.Point(477, 445);
-            this.penaltyBox.Margin = new System.Windows.Forms.Padding(2);
+            this.penaltyBox.Location = new System.Drawing.Point(636, 556);
+            this.penaltyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.penaltyBox.Name = "penaltyBox";
-            this.penaltyBox.Size = new System.Drawing.Size(173, 26);
+            this.penaltyBox.Size = new System.Drawing.Size(229, 31);
             this.penaltyBox.TabIndex = 33;
-            this.penaltyBox.TextChanged += new System.EventHandler(this.penaltyBox_TextChanged);
             // 
             // PenatlyLabel
             // 
             this.PenatlyLabel.AutoSize = true;
             this.PenatlyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PenatlyLabel.Location = new System.Drawing.Point(352, 445);
-            this.PenatlyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PenatlyLabel.Location = new System.Drawing.Point(469, 556);
             this.PenatlyLabel.Name = "PenatlyLabel";
-            this.PenatlyLabel.Size = new System.Drawing.Size(119, 20);
+            this.PenatlyLabel.Size = new System.Drawing.Size(161, 25);
             this.PenatlyLabel.TabIndex = 34;
             this.PenatlyLabel.Text = "Penalty amount";
             // 
@@ -210,26 +225,25 @@ namespace LibraryAppWeltec
             // 
             this.overduedayslabel.AutoSize = true;
             this.overduedayslabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.overduedayslabel.Location = new System.Drawing.Point(354, 403);
-            this.overduedayslabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.overduedayslabel.Location = new System.Drawing.Point(472, 504);
             this.overduedayslabel.Name = "overduedayslabel";
-            this.overduedayslabel.Size = new System.Drawing.Size(106, 20);
+            this.overduedayslabel.Size = new System.Drawing.Size(145, 25);
             this.overduedayslabel.TabIndex = 35;
             this.overduedayslabel.Text = "Days overdue";
             // 
             // overdueDaysBox
             // 
-            this.overdueDaysBox.Location = new System.Drawing.Point(476, 403);
-            this.overdueDaysBox.Margin = new System.Windows.Forms.Padding(2);
+            this.overdueDaysBox.Location = new System.Drawing.Point(635, 504);
+            this.overdueDaysBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.overdueDaysBox.Name = "overdueDaysBox";
-            this.overdueDaysBox.Size = new System.Drawing.Size(173, 26);
+            this.overdueDaysBox.Size = new System.Drawing.Size(229, 31);
             this.overdueDaysBox.TabIndex = 36;
             // 
             // StudentBorrowingsList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 571);
+            this.ClientSize = new System.Drawing.Size(937, 714);
             this.Controls.Add(this.overdueDaysBox);
             this.Controls.Add(this.overduedayslabel);
             this.Controls.Add(this.PenatlyLabel);
@@ -249,7 +263,7 @@ namespace LibraryAppWeltec
             this.Controls.Add(this.dueDateBox);
             this.Controls.Add(this.typeBox);
             this.Controls.Add(this.tutorList);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StudentBorrowingsList";
             this.Text = "Student Borrowings List";
             this.tutorList.ResumeLayout(false);

@@ -51,9 +51,9 @@
             // 
             this.tutorList.Controls.Add(this.tutorlistbox);
             this.tutorList.Location = new System.Drawing.Point(93, 99);
-            this.tutorList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorList.Margin = new System.Windows.Forms.Padding(4);
             this.tutorList.Name = "tutorList";
-            this.tutorList.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorList.Padding = new System.Windows.Forms.Padding(4);
             this.tutorList.Size = new System.Drawing.Size(359, 451);
             this.tutorList.TabIndex = 0;
             this.tutorList.TabStop = false;
@@ -64,7 +64,7 @@
             this.tutorlistbox.FormattingEnabled = true;
             this.tutorlistbox.ItemHeight = 25;
             this.tutorlistbox.Location = new System.Drawing.Point(8, 44);
-            this.tutorlistbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorlistbox.Margin = new System.Windows.Forms.Padding(4);
             this.tutorlistbox.Name = "tutorlistbox";
             this.tutorlistbox.Size = new System.Drawing.Size(320, 379);
             this.tutorlistbox.TabIndex = 0;
@@ -73,7 +73,7 @@
             // typeBox
             // 
             this.typeBox.Location = new System.Drawing.Point(630, 301);
-            this.typeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typeBox.Margin = new System.Windows.Forms.Padding(4);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(229, 31);
             this.typeBox.TabIndex = 1;
@@ -81,7 +81,7 @@
             // dueDateBox
             // 
             this.dueDateBox.Location = new System.Drawing.Point(630, 382);
-            this.dueDateBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dueDateBox.Margin = new System.Windows.Forms.Padding(4);
             this.dueDateBox.Name = "dueDateBox";
             this.dueDateBox.Size = new System.Drawing.Size(229, 31);
             this.dueDateBox.TabIndex = 2;
@@ -89,7 +89,7 @@
             // isRenewedBox
             // 
             this.isRenewedBox.Location = new System.Drawing.Point(630, 425);
-            this.isRenewedBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isRenewedBox.Margin = new System.Windows.Forms.Padding(4);
             this.isRenewedBox.Name = "isRenewedBox";
             this.isRenewedBox.Size = new System.Drawing.Size(229, 31);
             this.isRenewedBox.TabIndex = 3;
@@ -177,7 +177,7 @@
             // isbnBox
             // 
             this.isbnBox.Location = new System.Drawing.Point(630, 143);
-            this.isbnBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isbnBox.Margin = new System.Windows.Forms.Padding(4);
             this.isbnBox.Name = "isbnBox";
             this.isbnBox.Size = new System.Drawing.Size(229, 31);
             this.isbnBox.TabIndex = 15;
@@ -185,7 +185,7 @@
             // authorBox
             // 
             this.authorBox.Location = new System.Drawing.Point(630, 199);
-            this.authorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.authorBox.Margin = new System.Windows.Forms.Padding(4);
             this.authorBox.Name = "authorBox";
             this.authorBox.Size = new System.Drawing.Size(229, 31);
             this.authorBox.TabIndex = 16;
@@ -193,11 +193,10 @@
             // yearBox
             // 
             this.yearBox.Location = new System.Drawing.Point(630, 251);
-            this.yearBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(229, 31);
             this.yearBox.TabIndex = 17;
-            this.yearBox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // TutorBorrowingsList
             // 
@@ -219,7 +218,7 @@
             this.Controls.Add(this.dueDateBox);
             this.Controls.Add(this.typeBox);
             this.Controls.Add(this.tutorList);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TutorBorrowingsList";
             this.Text = "Tutor Borrowings List";
             this.tutorList.ResumeLayout(false);
